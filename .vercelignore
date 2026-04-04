@@ -8,3 +8,6 @@ requirements.txt
 __pycache__/
 *.pyc
 *.joblib
+Dockerfile
+nixpacks.toml
+runtime.txt
