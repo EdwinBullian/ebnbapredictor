@@ -4,7 +4,7 @@ import type {
   HistoryEntry,
 } from "./types";
 
-const BASE_URL = "/api";
+const BASE_URL = process.env.NEXT_PUBLIC_API_URL || "/api";
 
 async function fetchJSON<T>(url: string, options?: RequestInit): Promise<T> {
   const res = await fetch(url, options);

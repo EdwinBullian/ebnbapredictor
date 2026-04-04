@@ -1,0 +1,10 @@
+api/
+lib/
+models/
+server.py
+Procfile
+railway.json
+requirements.txt
+__pycache__/
+*.pyc
+*.joblib
