@@ -1,0 +1,9 @@
+{
+  "framework": "nextjs",
+  "functions": {
+    "api/*.py": {
+      "runtime": "@vercel/python@4",
+      "maxDuration": 300
+    }
+  }
+}
