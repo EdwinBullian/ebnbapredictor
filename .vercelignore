@@ -1,5 +1,5 @@
 api/
-lib/
+/lib/
 models/
 server.py
 Procfile
