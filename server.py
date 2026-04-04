@@ -9,6 +9,9 @@ import sys
 # Ensure lib/ is importable
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
+# Patch nba_api headers BEFORE any endpoint imports
+import lib.nba_config  # noqa: F401
+
 app = Flask(__name__)
 CORS(app)
 

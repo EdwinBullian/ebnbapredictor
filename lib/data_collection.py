@@ -4,6 +4,20 @@ import os
 import pandas as pd
 from nba_api.stats.endpoints import LeagueLeaders, PlayerGameLog
 
+def _retry_nba_call(endpoint_cls, max_retries=3, **kwargs):
+    """Call an nba_api endpoint with retries and exponential backoff."""
+    for attempt in range(max_retries):
+        try:
+            endpoint = endpoint_cls(timeout=60, **kwargs)
+            return endpoint.get_data_frames()[0]
+        except Exception as e:
+            if attempt < max_retries - 1:
+                wait = 2 ** (attempt + 1)  # 2s, 4s backoff
+                print(f"NBA API retry {attempt + 1}/{max_retries} after {wait}s: {e}")
+                time.sleep(wait)
+            else:
+                raise
+
 
 def get_top_players(season="2025-26", stat_category="PTS", top_n=100):
     """Get the top N players in a stat category for a given season.
@@ -15,13 +29,13 @@ def get_top_players(season="2025-26", stat_category="PTS", top_n=100):
 
     Returns DataFrame with columns: PLAYER_ID, PLAYER, TEAM_ID, TEAM, GP, plus the stat column.
     """
-    leaders = LeagueLeaders(
+    df = _retry_nba_call(
+        LeagueLeaders,
         season=season,
         stat_category_abbreviation=stat_category,
         per_mode48="PerGame",
         season_type_all_star="Regular Season",
     )
-    df = leaders.get_data_frames()[0]
     df = df.head(top_n)
     keep_cols = ["PLAYER_ID", "PLAYER", "TEAM_ID", "TEAM", "GP"]
     if stat_category in df.columns:
@@ -64,12 +78,12 @@ def get_player_game_logs(player_id, seasons=None):
     for season in seasons:
         time.sleep(0.6)  # Rate limiting for nba_api
         try:
-            log = PlayerGameLog(
+            df = _retry_nba_call(
+                PlayerGameLog,
                 player_id=player_id,
                 season=season,
                 season_type_all_star="Regular Season",
             )
-            df = log.get_data_frames()[0]
             if len(df) > 0:
                 all_logs.append(df)
         except Exception:
