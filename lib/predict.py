@@ -156,11 +156,19 @@ def generate_predictions(model, player_features_df, stat_type="Points", feature_
             "opponent": row.get("OPPONENT", ""),
             "matchup": row.get("MATCHUP", ""),
             "stat_type": stat_type,
+            "predicted": round(float(predicted_vals[i]), 1),
             pred_key: round(float(predicted_vals[i]), 1),
             "key_factors": _build_key_factors(row, stat_type),
             "last_5_games": last_5_list,
+            "avg_last_5": round(float(row.get(avg5_key, 0)), 1),
+            "season_avg": round(float(row.get(season_key, 0)), 1),
             avg5_key: round(float(row.get(avg5_key, 0)), 1),
             season_key: round(float(row.get(season_key, 0)), 1),
+            "line": None,
+            "edge": None,
+            "direction": None,
+            "confidence": None,
+            "bookmaker": None,
         }
         predictions.append(pred)
 

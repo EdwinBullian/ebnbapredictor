@@ -84,6 +84,15 @@ def _build_tonight_features(top_players, games, stat_type):
     combined_logs["OPPONENT"] = combined_logs.apply(_get_opponent, axis=1)
     combined_logs["MATCHUP"] = combined_logs.get("MATCHUP", "")
 
+    # Save player identity columns before feature building (which may drop them)
+    player_id_map = {}
+    if "PLAYER_NAME" in combined_logs.columns and "PLAYER_ID" in combined_logs.columns:
+        for _, r in combined_logs.drop_duplicates("PLAYER_ID").iterrows():
+            player_id_map[r["PLAYER_ID"]] = {
+                "PLAYER_NAME": r["PLAYER_NAME"],
+                "TEAM": r.get("TEAM", ""),
+            }
+
     try:
         if stat_type == "Points":
             features_df = build_features(combined_logs)
@@ -112,6 +121,16 @@ def _build_tonight_features(top_players, games, stat_type):
     except Exception as e:
         print(f"Feature building failed for {stat_type}: {e}")
         return None
+
+    # Restore PLAYER_NAME and TEAM if lost during feature building
+    if "PLAYER_NAME" not in features_df.columns and "PLAYER_ID" in features_df.columns:
+        features_df["PLAYER_NAME"] = features_df["PLAYER_ID"].map(
+            lambda pid: player_id_map.get(pid, {}).get("PLAYER_NAME", "Unknown")
+        )
+    if "TEAM" not in features_df.columns and "PLAYER_ID" in features_df.columns:
+        features_df["TEAM"] = features_df["PLAYER_ID"].map(
+            lambda pid: player_id_map.get(pid, {}).get("TEAM", "")
+        )
 
     if len(features_df) > 0:
         features_df = (
