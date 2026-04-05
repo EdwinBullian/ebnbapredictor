@@ -19,4 +19,4 @@ COPY models/ models/
 ENV PORT=8000
 EXPOSE 8000
 
-CMD gunicorn server:app --bind 0.0.0.0:$PORT --timeout 300 --workers 1
+CMD gunicorn server:app --bind 0.0.0.0:$PORT --timeout 600 --workers 1 --worker-class gthread --threads 2

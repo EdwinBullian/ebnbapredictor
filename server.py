@@ -47,7 +47,7 @@ def _build_tonight_features(top_players, games, stat_type):
         return None
 
     current_season = "2025-26"
-    seasons = [current_season, "2024-25", "2023-24"]
+    seasons = [current_season]  # Only current season to reduce API calls
 
     all_logs = []
     for _, player_row in tonight_players.iterrows():
@@ -213,7 +213,7 @@ def predictions():
                 continue
             model, feature_cols = models[stat_type]
             try:
-                top_players = get_players_fn(season="2025-26", top_n=100)
+                top_players = get_players_fn(season="2025-26", top_n=30)
                 features_df = _build_tonight_features(top_players, games, stat_type)
                 if features_df is None or len(features_df) == 0:
                     continue
