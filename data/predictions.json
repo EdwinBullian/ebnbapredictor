@@ -1,0 +1,3236 @@
+{
+  "date": "2026-04-05",
+  "games": [
+    {
+      "game_id": "0022501132",
+      "home_team": "BOS",
+      "home_team_id": 1610612738,
+      "away_team": "TOR",
+      "away_team_id": 1610612761,
+      "home_abbr": "BOS",
+      "away_abbr": "TOR"
+    },
+    {
+      "game_id": "0022501133",
+      "home_team": "BKN",
+      "home_team_id": 1610612751,
+      "away_team": "WAS",
+      "away_team_id": 1610612764,
+      "home_abbr": "BKN",
+      "away_abbr": "WAS"
+    },
+    {
+      "game_id": "0022501134",
+      "home_team": "CHI",
+      "home_team_id": 1610612741,
+      "away_team": "PHX",
+      "away_team_id": 1610612756,
+      "home_abbr": "CHI",
+      "away_abbr": "PHX"
+    },
+    {
+      "game_id": "0022501135",
+      "home_team": "MIL",
+      "home_team_id": 1610612749,
+      "away_team": "MEM",
+      "away_team_id": 1610612763,
+      "home_abbr": "MIL",
+      "away_abbr": "MEM"
+    },
+    {
+      "game_id": "0022501136",
+      "home_team": "CLE",
+      "home_team_id": 1610612739,
+      "away_team": "IND",
+      "away_team_id": 1610612754,
+      "home_abbr": "CLE",
+      "away_abbr": "IND"
+    },
+    {
+      "game_id": "0022501137",
+      "home_team": "MIN",
+      "home_team_id": 1610612750,
+      "away_team": "CHA",
+      "away_team_id": 1610612766,
+      "home_abbr": "MIN",
+      "away_abbr": "CHA"
+    },
+    {
+      "game_id": "0022501138",
+      "home_team": "NOP",
+      "home_team_id": 1610612740,
+      "away_team": "ORL",
+      "away_team_id": 1610612753,
+      "home_abbr": "NOP",
+      "away_abbr": "ORL"
+    },
+    {
+      "game_id": "0022501139",
+      "home_team": "OKC",
+      "home_team_id": 1610612760,
+      "away_team": "UTA",
+      "away_team_id": 1610612762,
+      "home_abbr": "OKC",
+      "away_abbr": "UTA"
+    },
+    {
+      "game_id": "0022501140",
+      "home_team": "DAL",
+      "home_team_id": 1610612742,
+      "away_team": "LAL",
+      "away_team_id": 1610612747,
+      "home_abbr": "DAL",
+      "away_abbr": "LAL"
+    },
+    {
+      "game_id": "0022501141",
+      "home_team": "SAC",
+      "home_team_id": 1610612758,
+      "away_team": "LAC",
+      "away_team_id": 1610612746,
+      "home_abbr": "SAC",
+      "away_abbr": "LAC"
+    },
+    {
+      "game_id": "0022501142",
+      "home_team": "GSW",
+      "home_team_id": 1610612744,
+      "away_team": "HOU",
+      "away_team_id": 1610612745,
+      "home_abbr": "GSW",
+      "away_abbr": "HOU"
+    }
+  ],
+  "points": [
+    {
+      "player_name": "LeBron James",
+      "team": "LAL",
+      "opponent": "OKC",
+      "stat_type": "Points",
+      "predicted": 18.7,
+      "line": 25.5,
+      "edge": -6.8,
+      "direction": "UNDER",
+      "confidence": 62,
+      "bettable": true,
+      "odds_type": "standard",
+      "bookmaker": "PrizePicks",
+      "key_factors": [
+        "Averaging 16.8 PPG over last 5 games",
+        "Trending below season average (20.7)",
+        "Tough defensive opponent (DEF RTG: 106.1)"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 16.8,
+      "season_avg": 20.7
+    },
+    {
+      "player_name": "DeMar DeRozan",
+      "team": "SAC",
+      "opponent": "NOP",
+      "stat_type": "Points",
+      "predicted": 19.5,
+      "line": 16.5,
+      "edge": 3.0,
+      "direction": "OVER",
+      "confidence": 55,
+      "bettable": true,
+      "odds_type": "standard",
+      "bookmaker": "PrizePicks",
+      "key_factors": [
+        "Averaging 20.0 PPG over last 5 games",
+        "Opponent allows more (points, DEF RTG: 117.5)",
+        "Home game"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 20.0,
+      "season_avg": 18.6
+    },
+    {
+      "player_name": "Alperen Sengun",
+      "team": "HOU",
+      "opponent": "UTA",
+      "stat_type": "Points",
+      "predicted": 22.2,
+      "line": 18.5,
+      "edge": 3.7,
+      "direction": "OVER",
+      "confidence": 54,
+      "bettable": true,
+      "odds_type": "standard",
+      "bookmaker": "PrizePicks",
+      "key_factors": [
+        "Averaging 23.6 PPG over last 5 games",
+        "Trending above season average (20.6)",
+        "Opponent allows more (points, DEF RTG: 121.0)"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 23.6,
+      "season_avg": 20.6
+    },
+    {
+      "player_name": "Shai Gilgeous-Alexander",
+      "team": "OKC",
+      "opponent": "LAL",
+      "stat_type": "Points",
+      "predicted": 31.8,
+      "line": 29.5,
+      "edge": 2.3,
+      "direction": "OVER",
+      "confidence": 53,
+      "bettable": true,
+      "odds_type": "standard",
+      "bookmaker": "PrizePicks",
+      "key_factors": [
+        "Averaging 31.4 PPG over last 5 games",
+        "Opponent allows more (points, DEF RTG: 115.7)",
+        "Well-rested (3 days off)"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 31.4,
+      "season_avg": 31.6
+    },
+    {
+      "player_name": "Cooper Flagg",
+      "team": "DAL",
+      "opponent": "ORL",
+      "stat_type": "Points",
+      "predicted": 21.8,
+      "line": 24.5,
+      "edge": -2.7,
+      "direction": "UNDER",
+      "confidence": 47,
+      "bettable": true,
+      "odds_type": "standard",
+      "bookmaker": "PrizePicks",
+      "key_factors": [
+        "Averaging 22.6 PPG over last 5 games",
+        "Trending above season average (20.3)",
+        "Opponent allows more (points, DEF RTG: 114.2)"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 22.6,
+      "season_avg": 20.3
+    },
+    {
+      "player_name": "Desmond Bane",
+      "team": "ORL",
+      "opponent": "DAL",
+      "stat_type": "Points",
+      "predicted": 19.6,
+      "line": 21.5,
+      "edge": -1.9,
+      "direction": "UNDER",
+      "confidence": 44,
+      "bettable": true,
+      "odds_type": "standard",
+      "bookmaker": "PrizePicks",
+      "key_factors": [
+        "Averaging 18.4 PPG over last 5 games",
+        "Opponent allows more (points, DEF RTG: 115.1)"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 18.4,
+      "season_avg": 20.3
+    },
+    {
+      "player_name": "Zion Williamson",
+      "team": "NOP",
+      "opponent": "SAC",
+      "stat_type": "Points",
+      "predicted": 20.7,
+      "line": 22.5,
+      "edge": -1.8,
+      "direction": "UNDER",
+      "confidence": 43,
+      "bettable": true,
+      "odds_type": "standard",
+      "bookmaker": "PrizePicks",
+      "key_factors": [
+        "Averaging 19.6 PPG over last 5 games",
+        "Opponent allows more (points, DEF RTG: 120.2)",
+        "Back-to-back game"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 19.6,
+      "season_avg": 21.2
+    },
+    {
+      "player_name": "Miles Bridges",
+      "team": "CHA",
+      "opponent": "IND",
+      "stat_type": "Points",
+      "predicted": 16.3,
+      "line": 15.0,
+      "edge": 1.3,
+      "direction": "OVER",
+      "confidence": 43,
+      "bettable": true,
+      "odds_type": "standard",
+      "bookmaker": "PrizePicks",
+      "key_factors": [
+        "Averaging 17.2 PPG over last 5 games",
+        "Opponent allows more (points, DEF RTG: 118.3)",
+        "Back-to-back game"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 17.2,
+      "season_avg": 17.2
+    },
+    {
+      "player_name": "Brandon Miller",
+      "team": "CHA",
+      "opponent": "IND",
+      "stat_type": "Points",
+      "predicted": 20.7,
+      "line": 19.5,
+      "edge": 1.2,
+      "direction": "OVER",
+      "confidence": 42,
+      "bettable": true,
+      "odds_type": "standard",
+      "bookmaker": "PrizePicks",
+      "key_factors": [
+        "Averaging 21.0 PPG over last 5 games",
+        "Opponent allows more (points, DEF RTG: 118.3)",
+        "Back-to-back game"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 21.0,
+      "season_avg": 20.4
+    },
+    {
+      "player_name": "Julius Randle",
+      "team": "MIN",
+      "opponent": "PHI",
+      "stat_type": "Points",
+      "predicted": 20.3,
+      "line": 22.5,
+      "edge": -2.2,
+      "direction": "UNDER",
+      "confidence": 42,
+      "bettable": true,
+      "odds_type": "standard",
+      "bookmaker": "PrizePicks",
+      "key_factors": [
+        "Averaging 19.0 PPG over last 5 games",
+        "Trending below season average (21.1)",
+        "Opponent allows more (points, DEF RTG: 114.9)"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 19.0,
+      "season_avg": 21.1
+    },
+    {
+      "player_name": "Saddiq Bey",
+      "team": "NOP",
+      "opponent": "SAC",
+      "stat_type": "Points",
+      "predicted": 18.5,
+      "line": 19.5,
+      "edge": -1.0,
+      "direction": "UNDER",
+      "confidence": 40,
+      "bettable": true,
+      "odds_type": "standard",
+      "bookmaker": "PrizePicks",
+      "key_factors": [
+        "Averaging 17.4 PPG over last 5 games",
+        "Opponent allows more (points, DEF RTG: 120.2)",
+        "Back-to-back game"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 17.4,
+      "season_avg": 17.4
+    },
+    {
+      "player_name": "Kevin Durant",
+      "team": "HOU",
+      "opponent": "UTA",
+      "stat_type": "Points",
+      "predicted": 25.8,
+      "line": 24.5,
+      "edge": 1.3,
+      "direction": "OVER",
+      "confidence": 38,
+      "bettable": true,
+      "odds_type": "standard",
+      "bookmaker": "PrizePicks",
+      "key_factors": [
+        "Averaging 24.2 PPG over last 5 games",
+        "Opponent allows more (points, DEF RTG: 121.0)",
+        "Home game"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 24.2,
+      "season_avg": 25.8
+    },
+    {
+      "player_name": "LaMelo Ball",
+      "team": "CHA",
+      "opponent": "IND",
+      "stat_type": "Points",
+      "predicted": 21.6,
+      "line": 20.5,
+      "edge": 1.1,
+      "direction": "OVER",
+      "confidence": 36,
+      "bettable": true,
+      "odds_type": "standard",
+      "bookmaker": "PrizePicks",
+      "key_factors": [
+        "Averaging 18.0 PPG over last 5 games",
+        "Opponent allows more (points, DEF RTG: 118.3)",
+        "Back-to-back game"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 18.0,
+      "season_avg": 19.6
+    },
+    {
+      "player_name": "Donovan Mitchell",
+      "team": "CLE",
+      "opponent": "GSW",
+      "stat_type": "Points",
+      "predicted": 26.0,
+      "line": 27.5,
+      "edge": -1.5,
+      "direction": "UNDER",
+      "confidence": 30,
+      "bettable": true,
+      "odds_type": "standard",
+      "bookmaker": "PrizePicks",
+      "key_factors": [
+        "Averaging 24.0 PPG over last 5 games",
+        "Trending below season average (27.7)",
+        "Opponent allows more (points, DEF RTG: 113.9)"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 24.0,
+      "season_avg": 27.7
+    },
+    {
+      "player_name": "Paolo Banchero",
+      "team": "ORL",
+      "opponent": "DAL",
+      "stat_type": "Points",
+      "predicted": 23.9,
+      "line": 23.5,
+      "edge": 0.4,
+      "direction": "OVER",
+      "confidence": 29,
+      "bettable": true,
+      "odds_type": "standard",
+      "bookmaker": "PrizePicks",
+      "key_factors": [
+        "Averaging 21.0 PPG over last 5 games",
+        "Opponent allows more (points, DEF RTG: 115.1)"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 21.0,
+      "season_avg": 22.4
+    },
+    {
+      "player_name": "Kon Knueppel",
+      "team": "CHA",
+      "opponent": "IND",
+      "stat_type": "Points",
+      "predicted": 18.1,
+      "line": 17.5,
+      "edge": 0.6,
+      "direction": "OVER",
+      "confidence": 26,
+      "bettable": true,
+      "odds_type": "standard",
+      "bookmaker": "PrizePicks",
+      "key_factors": [
+        "Averaging 15.6 PPG over last 5 games",
+        "Trending below season average (18.8)",
+        "Opponent allows more (points, DEF RTG: 118.3)"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 15.6,
+      "season_avg": 18.8
+    },
+    {
+      "player_name": "Chet Holmgren",
+      "team": "OKC",
+      "opponent": "LAL",
+      "stat_type": "Points",
+      "predicted": 15.1,
+      "line": 14.5,
+      "edge": 0.6,
+      "direction": "OVER",
+      "confidence": 26,
+      "bettable": true,
+      "odds_type": "standard",
+      "bookmaker": "PrizePicks",
+      "key_factors": [
+        "Averaging 14.8 PPG over last 5 games",
+        "Trending below season average (17.0)",
+        "Opponent allows more (points, DEF RTG: 115.7)"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 14.8,
+      "season_avg": 17.0
+    },
+    {
+      "player_name": "Amen Thompson",
+      "team": "HOU",
+      "opponent": "UTA",
+      "stat_type": "Points",
+      "predicted": 17.8,
+      "line": 17.5,
+      "edge": 0.3,
+      "direction": "OVER",
+      "confidence": 23,
+      "bettable": true,
+      "odds_type": "standard",
+      "bookmaker": "PrizePicks",
+      "key_factors": [
+        "Averaging 15.6 PPG over last 5 games",
+        "Trending below season average (17.9)",
+        "Opponent allows more (points, DEF RTG: 121.0)"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 15.6,
+      "season_avg": 17.9
+    },
+    {
+      "player_name": "Kawhi Leonard",
+      "team": "LAC",
+      "opponent": "SAS",
+      "stat_type": "Points",
+      "predicted": 27.2,
+      "line": 27.5,
+      "edge": -0.3,
+      "direction": "UNDER",
+      "confidence": 23,
+      "bettable": true,
+      "odds_type": "standard",
+      "bookmaker": "PrizePicks",
+      "key_factors": [
+        "Averaging 25.2 PPG over last 5 games",
+        "Trending below season average (28.1)",
+        "High usage (32.7%)"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 25.2,
+      "season_avg": 28.1
+    },
+    {
+      "player_name": "James Harden",
+      "team": "CLE",
+      "opponent": "GSW",
+      "stat_type": "Points",
+      "predicted": 20.8,
+      "line": 21.5,
+      "edge": -0.7,
+      "direction": "UNDER",
+      "confidence": 22,
+      "bettable": true,
+      "odds_type": "standard",
+      "bookmaker": "PrizePicks",
+      "key_factors": [
+        "Averaging 18.2 PPG over last 5 games",
+        "Trending below season average (23.7)",
+        "Opponent allows more (points, DEF RTG: 113.9)"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 18.2,
+      "season_avg": 23.7
+    },
+    {
+      "player_name": "Anthony Edwards",
+      "team": "MIN",
+      "opponent": "PHI",
+      "stat_type": "Points",
+      "predicted": 27.7,
+      "line": null,
+      "edge": null,
+      "direction": null,
+      "confidence": null,
+      "bookmaker": null,
+      "key_factors": [
+        "Averaging 25.6 PPG over last 5 games",
+        "Trending below season average (29.3)",
+        "Opponent allows more (points, DEF RTG: 114.9)"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 25.6,
+      "season_avg": 29.3
+    },
+    {
+      "player_name": "Scottie Barnes",
+      "team": "TOR",
+      "opponent": "MEM",
+      "stat_type": "Points",
+      "predicted": 16.6,
+      "line": null,
+      "edge": null,
+      "direction": null,
+      "confidence": null,
+      "bookmaker": null,
+      "key_factors": [
+        "Averaging 14.8 PPG over last 5 games",
+        "Trending below season average (18.3)",
+        "Opponent allows more (points, DEF RTG: 117.6)"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 14.8,
+      "season_avg": 18.3
+    },
+    {
+      "player_name": "Jaylen Brown",
+      "team": "BOS",
+      "opponent": "MIL",
+      "stat_type": "Points",
+      "predicted": 31.0,
+      "line": null,
+      "edge": null,
+      "direction": null,
+      "confidence": null,
+      "bookmaker": null,
+      "key_factors": [
+        "Averaging 32.4 PPG over last 5 games",
+        "Trending above season average (28.8)",
+        "Opponent allows more (points, DEF RTG: 118.2)"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 32.4,
+      "season_avg": 28.8
+    },
+    {
+      "player_name": "Trey Murphy III",
+      "team": "NOP",
+      "opponent": "SAC",
+      "stat_type": "Points",
+      "predicted": 21.8,
+      "line": null,
+      "edge": null,
+      "direction": null,
+      "confidence": null,
+      "bookmaker": null,
+      "key_factors": [
+        "Averaging 19.0 PPG over last 5 games",
+        "Trending below season average (21.6)",
+        "Opponent allows more (points, DEF RTG: 120.2)"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 19.0,
+      "season_avg": 21.6
+    },
+    {
+      "player_name": "Pascal Siakam",
+      "team": "IND",
+      "opponent": "CHA",
+      "stat_type": "Points",
+      "predicted": 23.6,
+      "line": null,
+      "edge": null,
+      "direction": null,
+      "confidence": null,
+      "bookmaker": null,
+      "key_factors": [
+        "Averaging 24.6 PPG over last 5 games",
+        "Opponent allows more (points, DEF RTG: 113.4)",
+        "High usage (29.2%)"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 24.6,
+      "season_avg": 23.9
+    },
+    {
+      "player_name": "Payton Pritchard",
+      "team": "BOS",
+      "opponent": "MIL",
+      "stat_type": "Points",
+      "predicted": 17.3,
+      "line": null,
+      "edge": null,
+      "direction": null,
+      "confidence": null,
+      "bookmaker": null,
+      "key_factors": [
+        "Averaging 21.6 PPG over last 5 games",
+        "Trending above season average (17.0)",
+        "Opponent allows more (points, DEF RTG: 118.2)"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 21.6,
+      "season_avg": 17.0
+    },
+    {
+      "player_name": "Brandon Ingram",
+      "team": "TOR",
+      "opponent": "MEM",
+      "stat_type": "Points",
+      "predicted": 20.8,
+      "line": null,
+      "edge": null,
+      "direction": null,
+      "confidence": null,
+      "bookmaker": null,
+      "key_factors": [
+        "Averaging 15.6 PPG over last 5 games",
+        "Trending below season average (21.4)",
+        "Opponent allows more (points, DEF RTG: 117.6)"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 15.6,
+      "season_avg": 21.4
+    },
+    {
+      "player_name": "Josh Giddey",
+      "team": "CHI",
+      "opponent": "NYK",
+      "stat_type": "Points",
+      "predicted": 15.7,
+      "line": null,
+      "edge": null,
+      "direction": null,
+      "confidence": null,
+      "bookmaker": null,
+      "key_factors": [
+        "Averaging 14.0 PPG over last 5 games",
+        "Trending below season average (17.2)",
+        "Opponent allows more (points, DEF RTG: 112.3)"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 14.0,
+      "season_avg": 17.2
+    },
+    {
+      "player_name": "Evan Mobley",
+      "team": "CLE",
+      "opponent": "GSW",
+      "stat_type": "Points",
+      "predicted": 17.2,
+      "line": null,
+      "edge": null,
+      "direction": null,
+      "confidence": null,
+      "bookmaker": null,
+      "key_factors": [
+        "Averaging 18.0 PPG over last 5 games",
+        "Opponent allows more (points, DEF RTG: 113.9)",
+        "Minutes trending down (-3.2 min)"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 18.0,
+      "season_avg": 18.2
+    },
+    {
+      "player_name": "Devin Booker",
+      "team": "PHX",
+      "opponent": "CHA",
+      "stat_type": "Points",
+      "predicted": 27.1,
+      "line": null,
+      "edge": null,
+      "direction": null,
+      "confidence": null,
+      "bookmaker": null,
+      "key_factors": [
+        "Averaging 28.6 PPG over last 5 games",
+        "Trending above season average (25.8)",
+        "Opponent allows more (points, DEF RTG: 113.4)"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 28.6,
+      "season_avg": 25.8
+    },
+    {
+      "player_name": "Luka Don\u010di\u0107",
+      "team": "LAL",
+      "opponent": "OKC",
+      "stat_type": "Points",
+      "predicted": 32.9,
+      "line": null,
+      "edge": null,
+      "direction": null,
+      "confidence": null,
+      "bookmaker": null,
+      "key_factors": [
+        "Averaging 38.2 PPG over last 5 games",
+        "Trending above season average (33.8)",
+        "Tough defensive opponent (DEF RTG: 106.1)"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 38.2,
+      "season_avg": 33.8
+    },
+    {
+      "player_name": "Ryan Rollins",
+      "team": "MIL",
+      "opponent": "DAL",
+      "stat_type": "Points",
+      "predicted": 17.5,
+      "line": null,
+      "edge": null,
+      "direction": null,
+      "confidence": null,
+      "bookmaker": null,
+      "key_factors": [
+        "Averaging 20.4 PPG over last 5 games",
+        "Trending above season average (17.0)",
+        "Opponent allows more (points, DEF RTG: 115.1)"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 20.4,
+      "season_avg": 17.0
+    },
+    {
+      "player_name": "Andrew Nembhard",
+      "team": "IND",
+      "opponent": "MIA",
+      "stat_type": "Points",
+      "predicted": 16.4,
+      "line": null,
+      "edge": null,
+      "direction": null,
+      "confidence": null,
+      "bookmaker": null,
+      "key_factors": [
+        "Averaging 14.6 PPG over last 5 games",
+        "Trending below season average (17.0)",
+        "Opponent allows more (points, DEF RTG: 113.4)"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 14.6,
+      "season_avg": 17.0
+    },
+    {
+      "player_name": "Immanuel Quickley",
+      "team": "TOR",
+      "opponent": "PHX",
+      "stat_type": "Points",
+      "predicted": 15.6,
+      "line": null,
+      "edge": null,
+      "direction": null,
+      "confidence": null,
+      "bookmaker": null,
+      "key_factors": [
+        "Averaging 14.6 PPG over last 5 games",
+        "Trending below season average (17.0)",
+        "Opponent allows more (points, DEF RTG: 113.0)"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 14.6,
+      "season_avg": 17.0
+    }
+  ],
+  "rebounds": [
+    {
+      "player_name": "P.J. Washington",
+      "team": "DAL",
+      "opponent": "POR",
+      "stat_type": "Rebounds",
+      "predicted": 7.6,
+      "line": 5.5,
+      "edge": 2.1,
+      "direction": "OVER",
+      "confidence": 64,
+      "bettable": true,
+      "odds_type": "standard",
+      "bookmaker": "PrizePicks",
+      "key_factors": [
+        "Averaging 8.0 RPG over last 5 games",
+        "Opponent allows more (rebounds, DEF RTG: 113.5)",
+        "Minutes trending up (+2.4 min)"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 8.0,
+      "season_avg": 7.1
+    },
+    {
+      "player_name": "Daniel Gafford",
+      "team": "DAL",
+      "opponent": "ORL",
+      "stat_type": "Rebounds",
+      "predicted": 8.0,
+      "line": 6.5,
+      "edge": 1.5,
+      "direction": "OVER",
+      "confidence": 52,
+      "bettable": true,
+      "odds_type": "standard",
+      "bookmaker": "PrizePicks",
+      "key_factors": [
+        "Averaging 8.0 RPG over last 5 games",
+        "Trending above season average (6.9)",
+        "Opponent allows more (rebounds, DEF RTG: 114.2)"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 8.0,
+      "season_avg": 6.9
+    },
+    {
+      "player_name": "Kawhi Leonard",
+      "team": "LAC",
+      "opponent": "SAS",
+      "stat_type": "Rebounds",
+      "predicted": 7.0,
+      "line": 6.0,
+      "edge": 1.0,
+      "direction": "OVER",
+      "confidence": 48,
+      "bettable": true,
+      "odds_type": "standard",
+      "bookmaker": "PrizePicks",
+      "key_factors": [
+        "Averaging 7.0 RPG over last 5 games",
+        "High usage (32.7%)",
+        "Home game"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 7.0,
+      "season_avg": 6.3
+    },
+    {
+      "player_name": "Naz Reid",
+      "team": "MIN",
+      "opponent": "PHI",
+      "stat_type": "Rebounds",
+      "predicted": 6.4,
+      "line": 5.5,
+      "edge": 0.9,
+      "direction": "OVER",
+      "confidence": 46,
+      "bettable": true,
+      "odds_type": "standard",
+      "bookmaker": "PrizePicks",
+      "key_factors": [
+        "Averaging 7.0 RPG over last 5 games",
+        "Opponent allows more (rebounds, DEF RTG: 114.9)",
+        "Back-to-back game"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 7.0,
+      "season_avg": 6.2
+    },
+    {
+      "player_name": "Paolo Banchero",
+      "team": "ORL",
+      "opponent": "DAL",
+      "stat_type": "Rebounds",
+      "predicted": 8.7,
+      "line": 8.0,
+      "edge": 0.7,
+      "direction": "OVER",
+      "confidence": 43,
+      "bettable": true,
+      "odds_type": "standard",
+      "bookmaker": "PrizePicks",
+      "key_factors": [
+        "Averaging 7.4 RPG over last 5 games",
+        "Opponent allows more (rebounds, DEF RTG: 115.1)"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 7.4,
+      "season_avg": 8.3
+    },
+    {
+      "player_name": "Chet Holmgren",
+      "team": "OKC",
+      "opponent": "LAL",
+      "stat_type": "Rebounds",
+      "predicted": 9.2,
+      "line": 8.5,
+      "edge": 0.7,
+      "direction": "OVER",
+      "confidence": 43,
+      "bettable": true,
+      "odds_type": "standard",
+      "bookmaker": "PrizePicks",
+      "key_factors": [
+        "Averaging 8.4 RPG over last 5 games",
+        "Opponent allows more (rebounds, DEF RTG: 115.7)",
+        "Well-rested (3 days off)"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 8.4,
+      "season_avg": 8.9
+    },
+    {
+      "player_name": "Alperen Sengun",
+      "team": "HOU",
+      "opponent": "UTA",
+      "stat_type": "Rebounds",
+      "predicted": 8.9,
+      "line": 8.5,
+      "edge": 0.4,
+      "direction": "OVER",
+      "confidence": 37,
+      "bettable": true,
+      "odds_type": "standard",
+      "bookmaker": "PrizePicks",
+      "key_factors": [
+        "Averaging 8.2 RPG over last 5 games",
+        "Opponent allows more (rebounds, DEF RTG: 121.0)",
+        "Home game"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 8.2,
+      "season_avg": 8.9
+    },
+    {
+      "player_name": "Amen Thompson",
+      "team": "HOU",
+      "opponent": "UTA",
+      "stat_type": "Rebounds",
+      "predicted": 8.4,
+      "line": 8.0,
+      "edge": 0.4,
+      "direction": "OVER",
+      "confidence": 37,
+      "bettable": true,
+      "odds_type": "standard",
+      "bookmaker": "PrizePicks",
+      "key_factors": [
+        "Averaging 7.4 RPG over last 5 games",
+        "Opponent allows more (rebounds, DEF RTG: 121.0)",
+        "Home game"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 7.4,
+      "season_avg": 7.8
+    },
+    {
+      "player_name": "Rudy Gobert",
+      "team": "MIN",
+      "opponent": "PHI",
+      "stat_type": "Rebounds",
+      "predicted": 11.2,
+      "line": 11.5,
+      "edge": -0.3,
+      "direction": "UNDER",
+      "confidence": 35,
+      "bettable": true,
+      "odds_type": "standard",
+      "bookmaker": "PrizePicks",
+      "key_factors": [
+        "Averaging 11.4 RPG over last 5 games",
+        "Opponent allows more (rebounds, DEF RTG: 114.9)",
+        "Back-to-back game"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 11.4,
+      "season_avg": 11.4
+    },
+    {
+      "player_name": "Jabari Smith Jr.",
+      "team": "HOU",
+      "opponent": "UTA",
+      "stat_type": "Rebounds",
+      "predicted": 7.2,
+      "line": 6.5,
+      "edge": 0.7,
+      "direction": "OVER",
+      "confidence": 33,
+      "bettable": true,
+      "odds_type": "standard",
+      "bookmaker": "PrizePicks",
+      "key_factors": [
+        "Averaging 9.0 RPG over last 5 games",
+        "Trending above season average (6.9)",
+        "Opponent allows more (rebounds, DEF RTG: 121.0)"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 9.0,
+      "season_avg": 6.9
+    },
+    {
+      "player_name": "Precious Achiuwa",
+      "team": "SAC",
+      "opponent": "NOP",
+      "stat_type": "Rebounds",
+      "predicted": 9.5,
+      "line": 8.5,
+      "edge": 1.0,
+      "direction": "OVER",
+      "confidence": 33,
+      "bettable": true,
+      "odds_type": "standard",
+      "bookmaker": "PrizePicks",
+      "key_factors": [
+        "Averaging 11.4 RPG over last 5 games",
+        "Trending above season average (6.7)",
+        "Opponent allows more (rebounds, DEF RTG: 117.5)"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 11.4,
+      "season_avg": 6.7
+    },
+    {
+      "player_name": "Kyle Filipowski",
+      "team": "UTA",
+      "opponent": "HOU",
+      "stat_type": "Rebounds",
+      "predicted": 8.7,
+      "line": 8.0,
+      "edge": 0.7,
+      "direction": "OVER",
+      "confidence": 33,
+      "bettable": true,
+      "odds_type": "standard",
+      "bookmaker": "PrizePicks",
+      "key_factors": [
+        "Averaging 9.4 RPG over last 5 games",
+        "Trending above season average (7.1)",
+        "Opponent allows more (rebounds, DEF RTG: 112.1)"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 9.4,
+      "season_avg": 7.1
+    },
+    {
+      "player_name": "Maxime Raynaud",
+      "team": "SAC",
+      "opponent": "NOP",
+      "stat_type": "Rebounds",
+      "predicted": 8.6,
+      "line": 8.5,
+      "edge": 0.1,
+      "direction": "OVER",
+      "confidence": 32,
+      "bettable": true,
+      "odds_type": "standard",
+      "bookmaker": "PrizePicks",
+      "key_factors": [
+        "Averaging 8.0 RPG over last 5 games",
+        "Opponent allows more (rebounds, DEF RTG: 117.5)",
+        "Home game"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 8.0,
+      "season_avg": 7.3
+    },
+    {
+      "player_name": "Julius Randle",
+      "team": "MIN",
+      "opponent": "PHI",
+      "stat_type": "Rebounds",
+      "predicted": 6.6,
+      "line": 6.5,
+      "edge": 0.1,
+      "direction": "OVER",
+      "confidence": 32,
+      "bettable": true,
+      "odds_type": "standard",
+      "bookmaker": "PrizePicks",
+      "key_factors": [
+        "Averaging 6.4 RPG over last 5 games",
+        "Opponent allows more (rebounds, DEF RTG: 114.9)",
+        "Back-to-back game"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 6.4,
+      "season_avg": 6.8
+    },
+    {
+      "player_name": "Moussa Diabat\u00e9",
+      "team": "CHA",
+      "opponent": "PHX",
+      "stat_type": "Rebounds",
+      "predicted": 9.0,
+      "line": 9.0,
+      "edge": 0.0,
+      "direction": "UNDER",
+      "confidence": 30,
+      "bettable": true,
+      "odds_type": "standard",
+      "bookmaker": "PrizePicks",
+      "key_factors": [
+        "Averaging 9.0 RPG over last 5 games",
+        "Opponent allows more (rebounds, DEF RTG: 113.0)",
+        "Home game"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 9.0,
+      "season_avg": 8.8
+    },
+    {
+      "player_name": "Tari Eason",
+      "team": "HOU",
+      "opponent": "UTA",
+      "stat_type": "Rebounds",
+      "predicted": 6.9,
+      "line": 9.5,
+      "edge": -2.6,
+      "direction": "UNDER",
+      "confidence": 0,
+      "bettable": false,
+      "odds_type": "demon",
+      "bookmaker": "PrizePicks",
+      "key_factors": [
+        "Averaging 6.6 RPG over last 5 games",
+        "Opponent allows more (rebounds, DEF RTG: 121.0)",
+        "Home game"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 6.6,
+      "season_avg": 6.3
+    },
+    {
+      "player_name": "Wendell Carter Jr.",
+      "team": "ORL",
+      "opponent": "DAL",
+      "stat_type": "Rebounds",
+      "predicted": 8.0,
+      "line": 11.5,
+      "edge": -3.5,
+      "direction": "UNDER",
+      "confidence": 0,
+      "bettable": false,
+      "odds_type": "demon",
+      "bookmaker": "PrizePicks",
+      "key_factors": [
+        "Averaging 7.6 RPG over last 5 games",
+        "Opponent allows more (rebounds, DEF RTG: 115.1)"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 7.6,
+      "season_avg": 7.5
+    },
+    {
+      "player_name": "Cooper Flagg",
+      "team": "DAL",
+      "opponent": "ORL",
+      "stat_type": "Rebounds",
+      "predicted": 7.0,
+      "line": 9.5,
+      "edge": -2.5,
+      "direction": "UNDER",
+      "confidence": 0,
+      "bettable": false,
+      "odds_type": "demon",
+      "bookmaker": "PrizePicks",
+      "key_factors": [
+        "Averaging 5.8 RPG over last 5 games",
+        "Opponent allows more (rebounds, DEF RTG: 114.2)",
+        "Well-rested (3 days off)"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 5.8,
+      "season_avg": 6.6
+    },
+    {
+      "player_name": "Deandre Ayton",
+      "team": "LAL",
+      "opponent": "OKC",
+      "stat_type": "Rebounds",
+      "predicted": 8.4,
+      "line": 12.5,
+      "edge": -4.1,
+      "direction": "UNDER",
+      "confidence": 0,
+      "bettable": false,
+      "odds_type": "demon",
+      "bookmaker": "PrizePicks",
+      "key_factors": [
+        "Averaging 9.0 RPG over last 5 games",
+        "Tough defensive opponent (DEF RTG: 106.1)"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 9.0,
+      "season_avg": 8.3
+    },
+    {
+      "player_name": "Derik Queen",
+      "team": "NOP",
+      "opponent": "SAC",
+      "stat_type": "Rebounds",
+      "predicted": 6.7,
+      "line": null,
+      "edge": null,
+      "direction": null,
+      "confidence": null,
+      "bookmaker": null,
+      "key_factors": [
+        "Averaging 6.6 RPG over last 5 games",
+        "Opponent allows more (rebounds, DEF RTG: 120.2)",
+        "Back-to-back game"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 6.6,
+      "season_avg": 6.8
+    },
+    {
+      "player_name": "Neemias Queta",
+      "team": "BOS",
+      "opponent": "MIL",
+      "stat_type": "Rebounds",
+      "predicted": 9.0,
+      "line": null,
+      "edge": null,
+      "direction": null,
+      "confidence": null,
+      "bookmaker": null,
+      "key_factors": [
+        "Averaging 9.0 RPG over last 5 games",
+        "Opponent allows more (rebounds, DEF RTG: 118.2)",
+        "Minutes trending up (+4.0 min)"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 9.0,
+      "season_avg": 8.4
+    },
+    {
+      "player_name": "Nic Claxton",
+      "team": "BKN",
+      "opponent": "ATL",
+      "stat_type": "Rebounds",
+      "predicted": 6.4,
+      "line": null,
+      "edge": null,
+      "direction": null,
+      "confidence": null,
+      "bookmaker": null,
+      "key_factors": [
+        "Averaging 5.2 RPG over last 5 games",
+        "Trending below season average (7.0)",
+        "Opponent allows more (rebounds, DEF RTG: 112.7)"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 5.2,
+      "season_avg": 7.0
+    },
+    {
+      "player_name": "Scottie Barnes",
+      "team": "TOR",
+      "opponent": "MEM",
+      "stat_type": "Rebounds",
+      "predicted": 6.7,
+      "line": null,
+      "edge": null,
+      "direction": null,
+      "confidence": null,
+      "bookmaker": null,
+      "key_factors": [
+        "Averaging 5.0 RPG over last 5 games",
+        "Trending below season average (7.6)",
+        "Opponent allows more (rebounds, DEF RTG: 117.6)"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 5.0,
+      "season_avg": 7.6
+    },
+    {
+      "player_name": "Josh Giddey",
+      "team": "CHI",
+      "opponent": "NYK",
+      "stat_type": "Rebounds",
+      "predicted": 8.5,
+      "line": null,
+      "edge": null,
+      "direction": null,
+      "confidence": null,
+      "bookmaker": null,
+      "key_factors": [
+        "Averaging 8.6 RPG over last 5 games",
+        "Opponent allows more (rebounds, DEF RTG: 112.3)",
+        "Well-rested (4 days off)"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 8.6,
+      "season_avg": 8.4
+    },
+    {
+      "player_name": "Pascal Siakam",
+      "team": "IND",
+      "opponent": "CHA",
+      "stat_type": "Rebounds",
+      "predicted": 6.5,
+      "line": null,
+      "edge": null,
+      "direction": null,
+      "confidence": null,
+      "bookmaker": null,
+      "key_factors": [
+        "Averaging 7.0 RPG over last 5 games",
+        "Opponent allows more (rebounds, DEF RTG: 113.4)",
+        "High usage (29.2%)"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 7.0,
+      "season_avg": 6.6
+    },
+    {
+      "player_name": "Jaylen Brown",
+      "team": "BOS",
+      "opponent": "MIL",
+      "stat_type": "Rebounds",
+      "predicted": 7.3,
+      "line": null,
+      "edge": null,
+      "direction": null,
+      "confidence": null,
+      "bookmaker": null,
+      "key_factors": [
+        "Averaging 6.8 RPG over last 5 games",
+        "Opponent allows more (rebounds, DEF RTG: 118.2)",
+        "High usage (35.1%)"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 6.8,
+      "season_avg": 7.0
+    },
+    {
+      "player_name": "Mark Williams",
+      "team": "PHX",
+      "opponent": "CHA",
+      "stat_type": "Rebounds",
+      "predicted": 7.1,
+      "line": null,
+      "edge": null,
+      "direction": null,
+      "confidence": null,
+      "bookmaker": null,
+      "key_factors": [
+        "Averaging 7.6 RPG over last 5 games",
+        "Opponent allows more (rebounds, DEF RTG: 113.4)",
+        "Well-rested (7 days off)"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 7.6,
+      "season_avg": 8.1
+    },
+    {
+      "player_name": "Jarrett Allen",
+      "team": "CLE",
+      "opponent": "GSW",
+      "stat_type": "Rebounds",
+      "predicted": 8.3,
+      "line": null,
+      "edge": null,
+      "direction": null,
+      "confidence": null,
+      "bookmaker": null,
+      "key_factors": [
+        "Averaging 6.4 RPG over last 5 games",
+        "Trending below season average (8.4)",
+        "Opponent allows more (rebounds, DEF RTG: 113.9)"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 6.4,
+      "season_avg": 8.4
+    },
+    {
+      "player_name": "Luka Don\u010di\u0107",
+      "team": "LAL",
+      "opponent": "OKC",
+      "stat_type": "Rebounds",
+      "predicted": 8.0,
+      "line": null,
+      "edge": null,
+      "direction": null,
+      "confidence": null,
+      "bookmaker": null,
+      "key_factors": [
+        "Averaging 6.2 RPG over last 5 games",
+        "Trending below season average (7.8)",
+        "Tough defensive opponent (DEF RTG: 106.1)"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 6.2,
+      "season_avg": 7.8
+    },
+    {
+      "player_name": "Evan Mobley",
+      "team": "CLE",
+      "opponent": "GSW",
+      "stat_type": "Rebounds",
+      "predicted": 9.5,
+      "line": null,
+      "edge": null,
+      "direction": null,
+      "confidence": null,
+      "bookmaker": null,
+      "key_factors": [
+        "Averaging 9.0 RPG over last 5 games",
+        "Opponent allows more (rebounds, DEF RTG: 113.9)",
+        "Minutes trending down (-3.2 min)"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 9.0,
+      "season_avg": 8.9
+    },
+    {
+      "player_name": "Marvin Bagley III",
+      "team": "DAL",
+      "opponent": "POR",
+      "stat_type": "Rebounds",
+      "predicted": 6.1,
+      "line": null,
+      "edge": null,
+      "direction": null,
+      "confidence": null,
+      "bookmaker": null,
+      "key_factors": [
+        "Averaging 5.2 RPG over last 5 games",
+        "Opponent allows more (rebounds, DEF RTG: 113.5)"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 5.2,
+      "season_avg": 6.1
+    },
+    {
+      "player_name": "Bobby Portis",
+      "team": "MIL",
+      "opponent": "LAC",
+      "stat_type": "Rebounds",
+      "predicted": 6.9,
+      "line": null,
+      "edge": null,
+      "direction": null,
+      "confidence": null,
+      "bookmaker": null,
+      "key_factors": [
+        "Averaging 7.2 RPG over last 5 games",
+        "Opponent allows more (rebounds, DEF RTG: 115.3)",
+        "Well-rested (4 days off)"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 7.2,
+      "season_avg": 6.4
+    },
+    {
+      "player_name": "Day'Ron Sharpe",
+      "team": "BKN",
+      "opponent": "MEM",
+      "stat_type": "Rebounds",
+      "predicted": 7.5,
+      "line": null,
+      "edge": null,
+      "direction": null,
+      "confidence": null,
+      "bookmaker": null,
+      "key_factors": [
+        "Averaging 6.6 RPG over last 5 games",
+        "Opponent allows more (rebounds, DEF RTG: 117.6)",
+        "Home game"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 6.6,
+      "season_avg": 6.7
+    },
+    {
+      "player_name": "Nikola Vu\u010devi\u0107",
+      "team": "BOS",
+      "opponent": "DAL",
+      "stat_type": "Rebounds",
+      "predicted": 8.2,
+      "line": null,
+      "edge": null,
+      "direction": null,
+      "confidence": null,
+      "bookmaker": null,
+      "key_factors": [
+        "Averaging 8.0 RPG over last 5 games",
+        "Opponent allows more (rebounds, DEF RTG: 115.1)",
+        "Home game"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 8.0,
+      "season_avg": 8.8
+    }
+  ],
+  "assists": [
+    {
+      "player_name": "LeBron James",
+      "team": "LAL",
+      "opponent": "OKC",
+      "stat_type": "Assists",
+      "predicted": 7.4,
+      "line": 9.5,
+      "edge": -2.1,
+      "direction": "UNDER",
+      "confidence": 56,
+      "bettable": true,
+      "odds_type": "standard",
+      "bookmaker": "PrizePicks",
+      "key_factors": [
+        "Averaging 9.0 APG over last 5 games",
+        "Trending above season average (7.0)",
+        "Tough defensive opponent (DEF RTG: 106.1)"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 9.0,
+      "season_avg": 7.0
+    },
+    {
+      "player_name": "Shai Gilgeous-Alexander",
+      "team": "OKC",
+      "opponent": "LAL",
+      "stat_type": "Assists",
+      "predicted": 6.9,
+      "line": 5.5,
+      "edge": 1.4,
+      "direction": "OVER",
+      "confidence": 53,
+      "bettable": true,
+      "odds_type": "standard",
+      "bookmaker": "PrizePicks",
+      "key_factors": [
+        "Averaging 5.0 APG over last 5 games",
+        "Trending below season average (6.5)",
+        "Opponent allows more (assists, DEF RTG: 115.7)"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 5.0,
+      "season_avg": 6.5
+    },
+    {
+      "player_name": "Julius Randle",
+      "team": "MIN",
+      "opponent": "PHI",
+      "stat_type": "Assists",
+      "predicted": 4.7,
+      "line": 4.0,
+      "edge": 0.7,
+      "direction": "OVER",
+      "confidence": 44,
+      "bettable": true,
+      "odds_type": "standard",
+      "bookmaker": "PrizePicks",
+      "key_factors": [
+        "Averaging 4.8 APG over last 5 games",
+        "Opponent allows more (assists, DEF RTG: 114.9)",
+        "Back-to-back game"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 4.8,
+      "season_avg": 5.1
+    },
+    {
+      "player_name": "Paolo Banchero",
+      "team": "ORL",
+      "opponent": "DAL",
+      "stat_type": "Assists",
+      "predicted": 5.6,
+      "line": 5.0,
+      "edge": 0.6,
+      "direction": "OVER",
+      "confidence": 42,
+      "bettable": true,
+      "odds_type": "standard",
+      "bookmaker": "PrizePicks",
+      "key_factors": [
+        "Averaging 5.2 APG over last 5 games",
+        "Opponent allows more (assists, DEF RTG: 115.1)"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 5.2,
+      "season_avg": 5.1
+    },
+    {
+      "player_name": "Alperen Sengun",
+      "team": "HOU",
+      "opponent": "UTA",
+      "stat_type": "Assists",
+      "predicted": 6.5,
+      "line": 6.0,
+      "edge": 0.5,
+      "direction": "OVER",
+      "confidence": 40,
+      "bettable": true,
+      "odds_type": "standard",
+      "bookmaker": "PrizePicks",
+      "key_factors": [
+        "Averaging 6.2 APG over last 5 games",
+        "Opponent allows more (assists, DEF RTG: 121.0)",
+        "Home game"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 6.2,
+      "season_avg": 6.2
+    },
+    {
+      "player_name": "Draymond Green",
+      "team": "GSW",
+      "opponent": "CLE",
+      "stat_type": "Assists",
+      "predicted": 5.5,
+      "line": 6.0,
+      "edge": -0.5,
+      "direction": "UNDER",
+      "confidence": 40,
+      "bettable": true,
+      "odds_type": "standard",
+      "bookmaker": "PrizePicks",
+      "key_factors": [
+        "Averaging 5.6 APG over last 5 games",
+        "Opponent allows more (assists, DEF RTG: 114.0)",
+        "Back-to-back game"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 5.6,
+      "season_avg": 5.3
+    },
+    {
+      "player_name": "Donovan Mitchell",
+      "team": "CLE",
+      "opponent": "GSW",
+      "stat_type": "Assists",
+      "predicted": 5.5,
+      "line": 5.0,
+      "edge": 0.5,
+      "direction": "OVER",
+      "confidence": 40,
+      "bettable": true,
+      "odds_type": "standard",
+      "bookmaker": "PrizePicks",
+      "key_factors": [
+        "Averaging 4.8 APG over last 5 games",
+        "Opponent allows more (assists, DEF RTG: 113.9)",
+        "High usage (31.0%)"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 4.8,
+      "season_avg": 5.7
+    },
+    {
+      "player_name": "DeMar DeRozan",
+      "team": "SAC",
+      "opponent": "NOP",
+      "stat_type": "Assists",
+      "predicted": 4.9,
+      "line": 4.0,
+      "edge": 0.9,
+      "direction": "OVER",
+      "confidence": 38,
+      "bettable": true,
+      "odds_type": "standard",
+      "bookmaker": "PrizePicks",
+      "key_factors": [
+        "Averaging 6.2 APG over last 5 games",
+        "Trending above season average (4.1)",
+        "Opponent allows more (assists, DEF RTG: 117.5)"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 6.2,
+      "season_avg": 4.1
+    },
+    {
+      "player_name": "Desmond Bane",
+      "team": "ORL",
+      "opponent": "DAL",
+      "stat_type": "Assists",
+      "predicted": 4.4,
+      "line": 4.0,
+      "edge": 0.4,
+      "direction": "OVER",
+      "confidence": 38,
+      "bettable": true,
+      "odds_type": "standard",
+      "bookmaker": "PrizePicks",
+      "key_factors": [
+        "Averaging 3.6 APG over last 5 games",
+        "Opponent allows more (assists, DEF RTG: 115.1)"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 3.6,
+      "season_avg": 4.2
+    },
+    {
+      "player_name": "LaMelo Ball",
+      "team": "CHA",
+      "opponent": "IND",
+      "stat_type": "Assists",
+      "predicted": 7.2,
+      "line": 7.0,
+      "edge": 0.2,
+      "direction": "OVER",
+      "confidence": 34,
+      "bettable": true,
+      "odds_type": "standard",
+      "bookmaker": "PrizePicks",
+      "key_factors": [
+        "Averaging 7.4 APG over last 5 games",
+        "Opponent allows more (assists, DEF RTG: 118.3)",
+        "Back-to-back game"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 7.4,
+      "season_avg": 7.1
+    },
+    {
+      "player_name": "Cooper Flagg",
+      "team": "DAL",
+      "opponent": "ORL",
+      "stat_type": "Assists",
+      "predicted": 5.3,
+      "line": 5.5,
+      "edge": -0.2,
+      "direction": "UNDER",
+      "confidence": 34,
+      "bettable": true,
+      "odds_type": "standard",
+      "bookmaker": "PrizePicks",
+      "key_factors": [
+        "Averaging 4.4 APG over last 5 games",
+        "Opponent allows more (assists, DEF RTG: 114.2)",
+        "Well-rested (3 days off)"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 4.4,
+      "season_avg": 4.5
+    },
+    {
+      "player_name": "Amen Thompson",
+      "team": "HOU",
+      "opponent": "UTA",
+      "stat_type": "Assists",
+      "predicted": 5.3,
+      "line": 5.0,
+      "edge": 0.3,
+      "direction": "OVER",
+      "confidence": 31,
+      "bettable": true,
+      "odds_type": "standard",
+      "bookmaker": "PrizePicks",
+      "key_factors": [
+        "Averaging 6.4 APG over last 5 games",
+        "Trending above season average (5.3)",
+        "Opponent allows more (assists, DEF RTG: 121.0)"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 6.4,
+      "season_avg": 5.3
+    },
+    {
+      "player_name": "Donte DiVincenzo",
+      "team": "MIN",
+      "opponent": "PHI",
+      "stat_type": "Assists",
+      "predicted": 3.1,
+      "line": 5.5,
+      "edge": -2.4,
+      "direction": "UNDER",
+      "confidence": 0,
+      "bettable": false,
+      "odds_type": "demon",
+      "bookmaker": "PrizePicks",
+      "key_factors": [
+        "Averaging 1.8 APG over last 5 games",
+        "Trending below season average (3.9)",
+        "Opponent allows more (assists, DEF RTG: 114.9)"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 1.8,
+      "season_avg": 3.9
+    },
+    {
+      "player_name": "Kevin Durant",
+      "team": "HOU",
+      "opponent": "UTA",
+      "stat_type": "Assists",
+      "predicted": 6.4,
+      "line": 8.5,
+      "edge": -2.1,
+      "direction": "UNDER",
+      "confidence": 0,
+      "bettable": false,
+      "odds_type": "demon",
+      "bookmaker": "PrizePicks",
+      "key_factors": [
+        "Averaging 8.2 APG over last 5 games",
+        "Trending above season average (4.7)",
+        "Opponent allows more (assists, DEF RTG: 121.0)"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 8.2,
+      "season_avg": 4.7
+    },
+    {
+      "player_name": "James Harden",
+      "team": "CLE",
+      "opponent": "GSW",
+      "stat_type": "Assists",
+      "predicted": 8.1,
+      "line": 10.5,
+      "edge": -2.4,
+      "direction": "UNDER",
+      "confidence": 0,
+      "bettable": false,
+      "odds_type": "demon",
+      "bookmaker": "PrizePicks",
+      "key_factors": [
+        "Averaging 9.0 APG over last 5 games",
+        "Opponent allows more (assists, DEF RTG: 113.9)"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 9.0,
+      "season_avg": 8.1
+    },
+    {
+      "player_name": "Dennis Schr\u00f6der",
+      "team": "CLE",
+      "opponent": "GSW",
+      "stat_type": "Assists",
+      "predicted": 3.6,
+      "line": 5.5,
+      "edge": -1.9,
+      "direction": "UNDER",
+      "confidence": 0,
+      "bettable": false,
+      "odds_type": "demon",
+      "bookmaker": "PrizePicks",
+      "key_factors": [
+        "Averaging 3.8 APG over last 5 games",
+        "Trending below season average (4.8)",
+        "Opponent allows more (assists, DEF RTG: 113.9)"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 3.8,
+      "season_avg": 4.8
+    },
+    {
+      "player_name": "Bub Carrington",
+      "team": "WAS",
+      "opponent": "MIA",
+      "stat_type": "Assists",
+      "predicted": 5.3,
+      "line": null,
+      "edge": null,
+      "direction": null,
+      "confidence": null,
+      "bookmaker": null,
+      "key_factors": [
+        "Averaging 5.2 APG over last 5 games",
+        "Opponent allows more (assists, DEF RTG: 113.4)",
+        "Well-rested (3 days off)"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 5.2,
+      "season_avg": 4.6
+    },
+    {
+      "player_name": "Ryan Nembhard",
+      "team": "DAL",
+      "opponent": "ORL",
+      "stat_type": "Assists",
+      "predicted": 4.9,
+      "line": null,
+      "edge": null,
+      "direction": null,
+      "confidence": null,
+      "bookmaker": null,
+      "key_factors": [
+        "Averaging 4.0 APG over last 5 games",
+        "Opponent allows more (assists, DEF RTG: 114.2)",
+        "Well-rested (3 days off)"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 4.0,
+      "season_avg": 4.9
+    },
+    {
+      "player_name": "Scottie Barnes",
+      "team": "TOR",
+      "opponent": "MEM",
+      "stat_type": "Assists",
+      "predicted": 6.8,
+      "line": null,
+      "edge": null,
+      "direction": null,
+      "confidence": null,
+      "bookmaker": null,
+      "key_factors": [
+        "Averaging 12.2 APG over last 5 games",
+        "Trending above season average (5.9)",
+        "Opponent allows more (assists, DEF RTG: 117.6)"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 12.2,
+      "season_avg": 5.9
+    },
+    {
+      "player_name": "Tre Jones",
+      "team": "CHI",
+      "opponent": "NYK",
+      "stat_type": "Assists",
+      "predicted": 4.6,
+      "line": null,
+      "edge": null,
+      "direction": null,
+      "confidence": null,
+      "bookmaker": null,
+      "key_factors": [
+        "Averaging 5.2 APG over last 5 games",
+        "Opponent allows more (assists, DEF RTG: 112.3)"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 5.2,
+      "season_avg": 5.4
+    },
+    {
+      "player_name": "Derrick White",
+      "team": "BOS",
+      "opponent": "MIL",
+      "stat_type": "Assists",
+      "predicted": 5.1,
+      "line": null,
+      "edge": null,
+      "direction": null,
+      "confidence": null,
+      "bookmaker": null,
+      "key_factors": [
+        "Averaging 4.0 APG over last 5 games",
+        "Trending below season average (5.5)",
+        "Opponent allows more (assists, DEF RTG: 118.2)"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 4.0,
+      "season_avg": 5.5
+    },
+    {
+      "player_name": "Payton Pritchard",
+      "team": "BOS",
+      "opponent": "MIL",
+      "stat_type": "Assists",
+      "predicted": 4.3,
+      "line": null,
+      "edge": null,
+      "direction": null,
+      "confidence": null,
+      "bookmaker": null,
+      "key_factors": [
+        "Averaging 3.0 APG over last 5 games",
+        "Trending below season average (5.1)",
+        "Opponent allows more (assists, DEF RTG: 118.2)"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 3.0,
+      "season_avg": 5.1
+    },
+    {
+      "player_name": "Jaylen Brown",
+      "team": "BOS",
+      "opponent": "MIL",
+      "stat_type": "Assists",
+      "predicted": 6.1,
+      "line": null,
+      "edge": null,
+      "direction": null,
+      "confidence": null,
+      "bookmaker": null,
+      "key_factors": [
+        "Averaging 6.8 APG over last 5 games",
+        "Trending above season average (5.3)",
+        "Opponent allows more (assists, DEF RTG: 118.2)"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 6.8,
+      "season_avg": 5.3
+    },
+    {
+      "player_name": "Jamal Shead",
+      "team": "TOR",
+      "opponent": "MEM",
+      "stat_type": "Assists",
+      "predicted": 7.0,
+      "line": null,
+      "edge": null,
+      "direction": null,
+      "confidence": null,
+      "bookmaker": null,
+      "key_factors": [
+        "Averaging 8.2 APG over last 5 games",
+        "Trending above season average (5.4)",
+        "Opponent allows more (assists, DEF RTG: 117.6)"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 8.2,
+      "season_avg": 5.4
+    },
+    {
+      "player_name": "Josh Giddey",
+      "team": "CHI",
+      "opponent": "NYK",
+      "stat_type": "Assists",
+      "predicted": 9.0,
+      "line": null,
+      "edge": null,
+      "direction": null,
+      "confidence": null,
+      "bookmaker": null,
+      "key_factors": [
+        "Averaging 11.2 APG over last 5 games",
+        "Trending above season average (9.2)",
+        "Opponent allows more (assists, DEF RTG: 112.3)"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 11.2,
+      "season_avg": 9.2
+    },
+    {
+      "player_name": "Devin Booker",
+      "team": "PHX",
+      "opponent": "CHA",
+      "stat_type": "Assists",
+      "predicted": 6.1,
+      "line": null,
+      "edge": null,
+      "direction": null,
+      "confidence": null,
+      "bookmaker": null,
+      "key_factors": [
+        "Averaging 6.8 APG over last 5 games",
+        "Opponent allows more (assists, DEF RTG: 113.4)",
+        "High usage (30.6%)"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 6.8,
+      "season_avg": 6.0
+    },
+    {
+      "player_name": "Luka Don\u010di\u0107",
+      "team": "LAL",
+      "opponent": "OKC",
+      "stat_type": "Assists",
+      "predicted": 7.3,
+      "line": null,
+      "edge": null,
+      "direction": null,
+      "confidence": null,
+      "bookmaker": null,
+      "key_factors": [
+        "Averaging 7.2 APG over last 5 games",
+        "Trending below season average (8.3)",
+        "Tough defensive opponent (DEF RTG: 106.1)"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 7.2,
+      "season_avg": 8.3
+    },
+    {
+      "player_name": "Collin Gillespie",
+      "team": "PHX",
+      "opponent": "CHA",
+      "stat_type": "Assists",
+      "predicted": 4.9,
+      "line": null,
+      "edge": null,
+      "direction": null,
+      "confidence": null,
+      "bookmaker": null,
+      "key_factors": [
+        "Averaging 4.8 APG over last 5 games",
+        "Opponent allows more (assists, DEF RTG: 113.4)"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 4.8,
+      "season_avg": 4.8
+    },
+    {
+      "player_name": "Cam Spencer",
+      "team": "MEM",
+      "opponent": "NYK",
+      "stat_type": "Assists",
+      "predicted": 5.1,
+      "line": null,
+      "edge": null,
+      "direction": null,
+      "confidence": null,
+      "bookmaker": null,
+      "key_factors": [
+        "Averaging 6.2 APG over last 5 games",
+        "Opponent allows more (assists, DEF RTG: 112.3)",
+        "Home game"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 6.2,
+      "season_avg": 5.5
+    },
+    {
+      "player_name": "Walter Clayton Jr.",
+      "team": "MEM",
+      "opponent": "NYK",
+      "stat_type": "Assists",
+      "predicted": 5.5,
+      "line": null,
+      "edge": null,
+      "direction": null,
+      "confidence": null,
+      "bookmaker": null,
+      "key_factors": [
+        "Averaging 5.2 APG over last 5 games",
+        "Trending above season average (3.9)",
+        "Opponent allows more (assists, DEF RTG: 112.3)"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 5.2,
+      "season_avg": 3.9
+    },
+    {
+      "player_name": "Ryan Rollins",
+      "team": "MIL",
+      "opponent": "DAL",
+      "stat_type": "Assists",
+      "predicted": 6.0,
+      "line": null,
+      "edge": null,
+      "direction": null,
+      "confidence": null,
+      "bookmaker": null,
+      "key_factors": [
+        "Averaging 5.4 APG over last 5 games",
+        "Opponent allows more (assists, DEF RTG: 115.1)",
+        "Well-rested (3 days off)"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 5.4,
+      "season_avg": 5.6
+    },
+    {
+      "player_name": "Andrew Nembhard",
+      "team": "IND",
+      "opponent": "MIA",
+      "stat_type": "Assists",
+      "predicted": 8.2,
+      "line": null,
+      "edge": null,
+      "direction": null,
+      "confidence": null,
+      "bookmaker": null,
+      "key_factors": [
+        "Averaging 11.4 APG over last 5 games",
+        "Trending above season average (7.6)",
+        "Opponent allows more (assists, DEF RTG: 113.4)"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 11.4,
+      "season_avg": 7.6
+    },
+    {
+      "player_name": "T.J. McConnell",
+      "team": "IND",
+      "opponent": "MIA",
+      "stat_type": "Assists",
+      "predicted": 5.3,
+      "line": null,
+      "edge": null,
+      "direction": null,
+      "confidence": null,
+      "bookmaker": null,
+      "key_factors": [
+        "Averaging 6.0 APG over last 5 games",
+        "Opponent allows more (assists, DEF RTG: 113.4)",
+        "High-pace matchup (102.3)"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 6.0,
+      "season_avg": 5.1
+    },
+    {
+      "player_name": "Immanuel Quickley",
+      "team": "TOR",
+      "opponent": "PHX",
+      "stat_type": "Assists",
+      "predicted": 5.4,
+      "line": null,
+      "edge": null,
+      "direction": null,
+      "confidence": null,
+      "bookmaker": null,
+      "key_factors": [
+        "Averaging 5.2 APG over last 5 games",
+        "Opponent allows more (assists, DEF RTG: 113.0)"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 5.2,
+      "season_avg": 6.1
+    },
+    {
+      "player_name": "Russell Westbrook",
+      "team": "SAC",
+      "opponent": "PHI",
+      "stat_type": "Assists",
+      "predicted": 7.1,
+      "line": null,
+      "edge": null,
+      "direction": null,
+      "confidence": null,
+      "bookmaker": null,
+      "key_factors": [
+        "Averaging 10.2 APG over last 5 games",
+        "Trending above season average (6.6)",
+        "Opponent allows more (assists, DEF RTG: 114.9)"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 10.2,
+      "season_avg": 6.6
+    },
+    {
+      "player_name": "Isaiah Collier",
+      "team": "UTA",
+      "opponent": "MIN",
+      "stat_type": "Assists",
+      "predicted": 7.1,
+      "line": null,
+      "edge": null,
+      "direction": null,
+      "confidence": null,
+      "bookmaker": null,
+      "key_factors": [
+        "Averaging 6.6 APG over last 5 games",
+        "Well-rested (3 days off)"
+      ],
+      "last_5_games": [],
+      "avg_last_5": 6.6,
+      "season_avg": 7.2
+    }
+  ],
+  "parlays": [
+    {
+      "strategy": "Max Payout (6)",
+      "size": 6,
+      "picks": [
+        {
+          "player_name": "P.J. Washington",
+          "team": "DAL",
+          "opponent": "POR",
+          "stat_type": "Rebounds",
+          "stat_abbr": "REB",
+          "direction": "OVER",
+          "line": 5.5,
+          "predicted": 7.6,
+          "edge": 2.1,
+          "confidence": 64
+        },
+        {
+          "player_name": "LeBron James",
+          "team": "LAL",
+          "opponent": "OKC",
+          "stat_type": "Points",
+          "stat_abbr": "PTS",
+          "direction": "UNDER",
+          "line": 25.5,
+          "predicted": 18.7,
+          "edge": -6.8,
+          "confidence": 62
+        },
+        {
+          "player_name": "LeBron James",
+          "team": "LAL",
+          "opponent": "OKC",
+          "stat_type": "Assists",
+          "stat_abbr": "AST",
+          "direction": "UNDER",
+          "line": 9.5,
+          "predicted": 7.4,
+          "edge": -2.1,
+          "confidence": 56
+        },
+        {
+          "player_name": "DeMar DeRozan",
+          "team": "SAC",
+          "opponent": "NOP",
+          "stat_type": "Points",
+          "stat_abbr": "PTS",
+          "direction": "OVER",
+          "line": 16.5,
+          "predicted": 19.5,
+          "edge": 3.0,
+          "confidence": 55
+        },
+        {
+          "player_name": "Alperen Sengun",
+          "team": "HOU",
+          "opponent": "UTA",
+          "stat_type": "Points",
+          "stat_abbr": "PTS",
+          "direction": "OVER",
+          "line": 18.5,
+          "predicted": 22.2,
+          "edge": 3.7,
+          "confidence": 54
+        },
+        {
+          "player_name": "Shai Gilgeous-Alexander",
+          "team": "OKC",
+          "opponent": "LAL",
+          "stat_type": "Points",
+          "stat_abbr": "PTS",
+          "direction": "OVER",
+          "line": 29.5,
+          "predicted": 31.8,
+          "edge": 2.3,
+          "confidence": 53
+        }
+      ],
+      "all_hit_probability": 5.4,
+      "power_payout": "25.0x",
+      "flex_payouts": {
+        "6/6": "25.0x",
+        "5/6": "2.0x",
+        "4/6": "0.4x"
+      },
+      "expected_value": 109.1,
+      "power_ev": 34.8,
+      "flex_ev": 109.1,
+      "recommended_play": "Flex"
+    },
+    {
+      "strategy": "Full Send (4)",
+      "size": 4,
+      "picks": [
+        {
+          "player_name": "P.J. Washington",
+          "team": "DAL",
+          "opponent": "POR",
+          "stat_type": "Rebounds",
+          "stat_abbr": "REB",
+          "direction": "OVER",
+          "line": 5.5,
+          "predicted": 7.6,
+          "edge": 2.1,
+          "confidence": 64
+        },
+        {
+          "player_name": "LeBron James",
+          "team": "LAL",
+          "opponent": "OKC",
+          "stat_type": "Points",
+          "stat_abbr": "PTS",
+          "direction": "UNDER",
+          "line": 25.5,
+          "predicted": 18.7,
+          "edge": -6.8,
+          "confidence": 62
+        },
+        {
+          "player_name": "LeBron James",
+          "team": "LAL",
+          "opponent": "OKC",
+          "stat_type": "Assists",
+          "stat_abbr": "AST",
+          "direction": "UNDER",
+          "line": 9.5,
+          "predicted": 7.4,
+          "edge": -2.1,
+          "confidence": 56
+        },
+        {
+          "player_name": "DeMar DeRozan",
+          "team": "SAC",
+          "opponent": "NOP",
+          "stat_type": "Points",
+          "stat_abbr": "PTS",
+          "direction": "OVER",
+          "line": 16.5,
+          "predicted": 19.5,
+          "edge": 3.0,
+          "confidence": 55
+        }
+      ],
+      "all_hit_probability": 14.6,
+      "power_payout": "10.0x",
+      "flex_payouts": {
+        "4/4": "5.0x",
+        "3/4": "2.0x",
+        "2/4": "0.4x"
+      },
+      "expected_value": 108.3,
+      "power_ev": 46.3,
+      "flex_ev": 108.3,
+      "recommended_play": "Flex"
+    },
+    {
+      "strategy": "Full Send (5)",
+      "size": 5,
+      "picks": [
+        {
+          "player_name": "P.J. Washington",
+          "team": "DAL",
+          "opponent": "POR",
+          "stat_type": "Rebounds",
+          "stat_abbr": "REB",
+          "direction": "OVER",
+          "line": 5.5,
+          "predicted": 7.6,
+          "edge": 2.1,
+          "confidence": 64
+        },
+        {
+          "player_name": "LeBron James",
+          "team": "LAL",
+          "opponent": "OKC",
+          "stat_type": "Points",
+          "stat_abbr": "PTS",
+          "direction": "UNDER",
+          "line": 25.5,
+          "predicted": 18.7,
+          "edge": -6.8,
+          "confidence": 62
+        },
+        {
+          "player_name": "LeBron James",
+          "team": "LAL",
+          "opponent": "OKC",
+          "stat_type": "Assists",
+          "stat_abbr": "AST",
+          "direction": "UNDER",
+          "line": 9.5,
+          "predicted": 7.4,
+          "edge": -2.1,
+          "confidence": 56
+        },
+        {
+          "player_name": "DeMar DeRozan",
+          "team": "SAC",
+          "opponent": "NOP",
+          "stat_type": "Points",
+          "stat_abbr": "PTS",
+          "direction": "OVER",
+          "line": 16.5,
+          "predicted": 19.5,
+          "edge": 3.0,
+          "confidence": 55
+        },
+        {
+          "player_name": "Alperen Sengun",
+          "team": "HOU",
+          "opponent": "UTA",
+          "stat_type": "Points",
+          "stat_abbr": "PTS",
+          "direction": "OVER",
+          "line": 18.5,
+          "predicted": 22.2,
+          "edge": 3.7,
+          "confidence": 54
+        }
+      ],
+      "all_hit_probability": 8.9,
+      "power_payout": "20.0x",
+      "flex_payouts": {
+        "5/5": "10.0x",
+        "4/5": "2.0x",
+        "3/5": "0.4x"
+      },
+      "expected_value": 90.5,
+      "power_ev": 77.9,
+      "flex_ev": 90.5,
+      "recommended_play": "Flex"
+    },
+    {
+      "strategy": "Power Trio",
+      "size": 3,
+      "picks": [
+        {
+          "player_name": "P.J. Washington",
+          "team": "DAL",
+          "opponent": "POR",
+          "stat_type": "Rebounds",
+          "stat_abbr": "REB",
+          "direction": "OVER",
+          "line": 5.5,
+          "predicted": 7.6,
+          "edge": 2.1,
+          "confidence": 64
+        },
+        {
+          "player_name": "LeBron James",
+          "team": "LAL",
+          "opponent": "OKC",
+          "stat_type": "Points",
+          "stat_abbr": "PTS",
+          "direction": "UNDER",
+          "line": 25.5,
+          "predicted": 18.7,
+          "edge": -6.8,
+          "confidence": 62
+        },
+        {
+          "player_name": "LeBron James",
+          "team": "LAL",
+          "opponent": "OKC",
+          "stat_type": "Assists",
+          "stat_abbr": "AST",
+          "direction": "UNDER",
+          "line": 9.5,
+          "predicted": 7.4,
+          "edge": -2.1,
+          "confidence": 56
+        }
+      ],
+      "all_hit_probability": 24.0,
+      "power_payout": "5.0x",
+      "flex_payouts": {
+        "3/3": "2.25x",
+        "2/3": "1.25x"
+      },
+      "expected_value": 38.8,
+      "power_ev": 19.9,
+      "flex_ev": 38.8,
+      "recommended_play": "Flex"
+    },
+    {
+      "strategy": "Game Stack: OKCvLAL",
+      "size": 3,
+      "picks": [
+        {
+          "player_name": "Shai Gilgeous-Alexander",
+          "team": "OKC",
+          "opponent": "LAL",
+          "stat_type": "Points",
+          "stat_abbr": "PTS",
+          "direction": "OVER",
+          "line": 29.5,
+          "predicted": 31.8,
+          "edge": 2.3,
+          "confidence": 53
+        },
+        {
+          "player_name": "Shai Gilgeous-Alexander",
+          "team": "OKC",
+          "opponent": "LAL",
+          "stat_type": "Assists",
+          "stat_abbr": "AST",
+          "direction": "OVER",
+          "line": 5.5,
+          "predicted": 6.9,
+          "edge": 1.4,
+          "confidence": 53
+        },
+        {
+          "player_name": "Chet Holmgren",
+          "team": "OKC",
+          "opponent": "LAL",
+          "stat_type": "Rebounds",
+          "stat_abbr": "REB",
+          "direction": "OVER",
+          "line": 8.5,
+          "predicted": 9.2,
+          "edge": 0.7,
+          "confidence": 43
+        }
+      ],
+      "all_hit_probability": 21.5,
+      "power_payout": "5.0x",
+      "flex_payouts": {
+        "3/3": "2.25x",
+        "2/3": "1.25x"
+      },
+      "expected_value": 29.3,
+      "power_ev": 7.6,
+      "flex_ev": 29.3,
+      "recommended_play": "Flex"
+    },
+    {
+      "strategy": "Game Stack: MINvPHI",
+      "size": 3,
+      "picks": [
+        {
+          "player_name": "Naz Reid",
+          "team": "MIN",
+          "opponent": "PHI",
+          "stat_type": "Rebounds",
+          "stat_abbr": "REB",
+          "direction": "OVER",
+          "line": 5.5,
+          "predicted": 6.4,
+          "edge": 0.9,
+          "confidence": 46
+        },
+        {
+          "player_name": "Julius Randle",
+          "team": "MIN",
+          "opponent": "PHI",
+          "stat_type": "Assists",
+          "stat_abbr": "AST",
+          "direction": "OVER",
+          "line": 4.0,
+          "predicted": 4.7,
+          "edge": 0.7,
+          "confidence": 44
+        },
+        {
+          "player_name": "Julius Randle",
+          "team": "MIN",
+          "opponent": "PHI",
+          "stat_type": "Points",
+          "stat_abbr": "PTS",
+          "direction": "UNDER",
+          "line": 22.5,
+          "predicted": 20.3,
+          "edge": -2.2,
+          "confidence": 42
+        }
+      ],
+      "all_hit_probability": 20.3,
+      "power_payout": "5.0x",
+      "flex_payouts": {
+        "3/3": "2.25x",
+        "2/3": "1.25x"
+      },
+      "expected_value": 24.6,
+      "power_ev": 1.6,
+      "flex_ev": 24.6,
+      "recommended_play": "Flex"
+    },
+    {
+      "strategy": "Game Stack: ORLvDAL",
+      "size": 3,
+      "picks": [
+        {
+          "player_name": "Desmond Bane",
+          "team": "ORL",
+          "opponent": "DAL",
+          "stat_type": "Points",
+          "stat_abbr": "PTS",
+          "direction": "UNDER",
+          "line": 21.5,
+          "predicted": 19.6,
+          "edge": -1.9,
+          "confidence": 44
+        },
+        {
+          "player_name": "Paolo Banchero",
+          "team": "ORL",
+          "opponent": "DAL",
+          "stat_type": "Rebounds",
+          "stat_abbr": "REB",
+          "direction": "OVER",
+          "line": 8.0,
+          "predicted": 8.7,
+          "edge": 0.7,
+          "confidence": 43
+        },
+        {
+          "player_name": "Paolo Banchero",
+          "team": "ORL",
+          "opponent": "DAL",
+          "stat_type": "Assists",
+          "stat_abbr": "AST",
+          "direction": "OVER",
+          "line": 5.0,
+          "predicted": 5.6,
+          "edge": 0.6,
+          "confidence": 42
+        }
+      ],
+      "all_hit_probability": 20.1,
+      "power_payout": "5.0x",
+      "flex_payouts": {
+        "3/3": "2.25x",
+        "2/3": "1.25x"
+      },
+      "expected_value": 23.7,
+      "power_ev": 0.6,
+      "flex_ev": 23.7,
+      "recommended_play": "Flex"
+    },
+    {
+      "strategy": "Safe Double",
+      "size": 2,
+      "picks": [
+        {
+          "player_name": "P.J. Washington",
+          "team": "DAL",
+          "opponent": "POR",
+          "stat_type": "Rebounds",
+          "stat_abbr": "REB",
+          "direction": "OVER",
+          "line": 5.5,
+          "predicted": 7.6,
+          "edge": 2.1,
+          "confidence": 64
+        },
+        {
+          "player_name": "LeBron James",
+          "team": "LAL",
+          "opponent": "OKC",
+          "stat_type": "Points",
+          "stat_abbr": "PTS",
+          "direction": "UNDER",
+          "line": 25.5,
+          "predicted": 18.7,
+          "edge": -6.8,
+          "confidence": 62
+        }
+      ],
+      "all_hit_probability": 39.2,
+      "power_payout": "3.0x",
+      "flex_payouts": {
+        "2/2": "1.5x"
+      },
+      "expected_value": 17.6,
+      "power_ev": 17.6,
+      "flex_ev": -41.2,
+      "recommended_play": "Power"
+    },
+    {
+      "strategy": "Game Stack: LALvOKC",
+      "size": 2,
+      "picks": [
+        {
+          "player_name": "LeBron James",
+          "team": "LAL",
+          "opponent": "OKC",
+          "stat_type": "Points",
+          "stat_abbr": "PTS",
+          "direction": "UNDER",
+          "line": 25.5,
+          "predicted": 18.7,
+          "edge": -6.8,
+          "confidence": 62
+        },
+        {
+          "player_name": "LeBron James",
+          "team": "LAL",
+          "opponent": "OKC",
+          "stat_type": "Assists",
+          "stat_abbr": "AST",
+          "direction": "UNDER",
+          "line": 9.5,
+          "predicted": 7.4,
+          "edge": -2.1,
+          "confidence": 56
+        }
+      ],
+      "all_hit_probability": 38.2,
+      "power_payout": "3.0x",
+      "flex_payouts": {
+        "2/2": "1.5x"
+      },
+      "expected_value": 14.6,
+      "power_ev": 14.6,
+      "flex_ev": -42.7,
+      "recommended_play": "Power"
+    },
+    {
+      "strategy": "Player Stack: LeBron James",
+      "size": 2,
+      "picks": [
+        {
+          "player_name": "LeBron James",
+          "team": "LAL",
+          "opponent": "OKC",
+          "stat_type": "Points",
+          "stat_abbr": "PTS",
+          "direction": "UNDER",
+          "line": 25.5,
+          "predicted": 18.7,
+          "edge": -6.8,
+          "confidence": 62
+        },
+        {
+          "player_name": "LeBron James",
+          "team": "LAL",
+          "opponent": "OKC",
+          "stat_type": "Assists",
+          "stat_abbr": "AST",
+          "direction": "UNDER",
+          "line": 9.5,
+          "predicted": 7.4,
+          "edge": -2.1,
+          "confidence": 56
+        }
+      ],
+      "all_hit_probability": 38.2,
+      "power_payout": "3.0x",
+      "flex_payouts": {
+        "2/2": "1.5x"
+      },
+      "expected_value": 14.6,
+      "power_ev": 14.6,
+      "flex_ev": -42.7,
+      "recommended_play": "Power"
+    },
+    {
+      "strategy": "Safe Double",
+      "size": 2,
+      "picks": [
+        {
+          "player_name": "LeBron James",
+          "team": "LAL",
+          "opponent": "OKC",
+          "stat_type": "Assists",
+          "stat_abbr": "AST",
+          "direction": "UNDER",
+          "line": 9.5,
+          "predicted": 7.4,
+          "edge": -2.1,
+          "confidence": 56
+        },
+        {
+          "player_name": "DeMar DeRozan",
+          "team": "SAC",
+          "opponent": "NOP",
+          "stat_type": "Points",
+          "stat_abbr": "PTS",
+          "direction": "OVER",
+          "line": 16.5,
+          "predicted": 19.5,
+          "edge": 3.0,
+          "confidence": 55
+        }
+      ],
+      "all_hit_probability": 37.3,
+      "power_payout": "3.0x",
+      "flex_payouts": {
+        "2/2": "1.5x"
+      },
+      "expected_value": 12.0,
+      "power_ev": 12.0,
+      "flex_ev": -44.0,
+      "recommended_play": "Power"
+    },
+    {
+      "strategy": "Safe Double",
+      "size": 2,
+      "picks": [
+        {
+          "player_name": "Alperen Sengun",
+          "team": "HOU",
+          "opponent": "UTA",
+          "stat_type": "Points",
+          "stat_abbr": "PTS",
+          "direction": "OVER",
+          "line": 18.5,
+          "predicted": 22.2,
+          "edge": 3.7,
+          "confidence": 54
+        },
+        {
+          "player_name": "Shai Gilgeous-Alexander",
+          "team": "OKC",
+          "opponent": "LAL",
+          "stat_type": "Points",
+          "stat_abbr": "PTS",
+          "direction": "OVER",
+          "line": 29.5,
+          "predicted": 31.8,
+          "edge": 2.3,
+          "confidence": 53
+        }
+      ],
+      "all_hit_probability": 36.8,
+      "power_payout": "3.0x",
+      "flex_payouts": {
+        "2/2": "1.5x"
+      },
+      "expected_value": 10.5,
+      "power_ev": 10.5,
+      "flex_ev": -44.7,
+      "recommended_play": "Power"
+    },
+    {
+      "strategy": "Player Stack: Shai Gilgeous-Alexander",
+      "size": 2,
+      "picks": [
+        {
+          "player_name": "Shai Gilgeous-Alexander",
+          "team": "OKC",
+          "opponent": "LAL",
+          "stat_type": "Points",
+          "stat_abbr": "PTS",
+          "direction": "OVER",
+          "line": 29.5,
+          "predicted": 31.8,
+          "edge": 2.3,
+          "confidence": 53
+        },
+        {
+          "player_name": "Shai Gilgeous-Alexander",
+          "team": "OKC",
+          "opponent": "LAL",
+          "stat_type": "Assists",
+          "stat_abbr": "AST",
+          "direction": "OVER",
+          "line": 5.5,
+          "predicted": 6.9,
+          "edge": 1.4,
+          "confidence": 53
+        }
+      ],
+      "all_hit_probability": 36.7,
+      "power_payout": "3.0x",
+      "flex_payouts": {
+        "2/2": "1.5x"
+      },
+      "expected_value": 10.2,
+      "power_ev": 10.2,
+      "flex_ev": -44.9,
+      "recommended_play": "Power"
+    },
+    {
+      "strategy": "Game Stack: DALvORL",
+      "size": 2,
+      "picks": [
+        {
+          "player_name": "Daniel Gafford",
+          "team": "DAL",
+          "opponent": "ORL",
+          "stat_type": "Rebounds",
+          "stat_abbr": "REB",
+          "direction": "OVER",
+          "line": 6.5,
+          "predicted": 8.0,
+          "edge": 1.5,
+          "confidence": 52
+        },
+        {
+          "player_name": "Cooper Flagg",
+          "team": "DAL",
+          "opponent": "ORL",
+          "stat_type": "Points",
+          "stat_abbr": "PTS",
+          "direction": "UNDER",
+          "line": 24.5,
+          "predicted": 21.8,
+          "edge": -2.7,
+          "confidence": 47
+        }
+      ],
+      "all_hit_probability": 35.9,
+      "power_payout": "3.0x",
+      "flex_payouts": {
+        "2/2": "1.5x"
+      },
+      "expected_value": 7.6,
+      "power_ev": 7.6,
+      "flex_ev": -46.2,
+      "recommended_play": "Power"
+    },
+    {
+      "strategy": "Game Stack: HOUvUTA",
+      "size": 2,
+      "picks": [
+        {
+          "player_name": "Alperen Sengun",
+          "team": "HOU",
+          "opponent": "UTA",
+          "stat_type": "Points",
+          "stat_abbr": "PTS",
+          "direction": "OVER",
+          "line": 18.5,
+          "predicted": 22.2,
+          "edge": 3.7,
+          "confidence": 54
+        },
+        {
+          "player_name": "Alperen Sengun",
+          "team": "HOU",
+          "opponent": "UTA",
+          "stat_type": "Assists",
+          "stat_abbr": "AST",
+          "direction": "OVER",
+          "line": 6.0,
+          "predicted": 6.5,
+          "edge": 0.5,
+          "confidence": 40
+        }
+      ],
+      "all_hit_probability": 35.3,
+      "power_payout": "3.0x",
+      "flex_payouts": {
+        "2/2": "1.5x"
+      },
+      "expected_value": 5.8,
+      "power_ev": 5.8,
+      "flex_ev": -47.1,
+      "recommended_play": "Power"
+    },
+    {
+      "strategy": "Player Stack: Alperen Sengun",
+      "size": 2,
+      "picks": [
+        {
+          "player_name": "Alperen Sengun",
+          "team": "HOU",
+          "opponent": "UTA",
+          "stat_type": "Points",
+          "stat_abbr": "PTS",
+          "direction": "OVER",
+          "line": 18.5,
+          "predicted": 22.2,
+          "edge": 3.7,
+          "confidence": 54
+        },
+        {
+          "player_name": "Alperen Sengun",
+          "team": "HOU",
+          "opponent": "UTA",
+          "stat_type": "Assists",
+          "stat_abbr": "AST",
+          "direction": "OVER",
+          "line": 6.0,
+          "predicted": 6.5,
+          "edge": 0.5,
+          "confidence": 40
+        }
+      ],
+      "all_hit_probability": 35.3,
+      "power_payout": "3.0x",
+      "flex_payouts": {
+        "2/2": "1.5x"
+      },
+      "expected_value": 5.8,
+      "power_ev": 5.8,
+      "flex_ev": -47.1,
+      "recommended_play": "Power"
+    },
+    {
+      "strategy": "Player Stack: Julius Randle",
+      "size": 2,
+      "picks": [
+        {
+          "player_name": "Julius Randle",
+          "team": "MIN",
+          "opponent": "PHI",
+          "stat_type": "Assists",
+          "stat_abbr": "AST",
+          "direction": "OVER",
+          "line": 4.0,
+          "predicted": 4.7,
+          "edge": 0.7,
+          "confidence": 44
+        },
+        {
+          "player_name": "Julius Randle",
+          "team": "MIN",
+          "opponent": "PHI",
+          "stat_type": "Points",
+          "stat_abbr": "PTS",
+          "direction": "UNDER",
+          "line": 22.5,
+          "predicted": 20.3,
+          "edge": -2.2,
+          "confidence": 42
+        }
+      ],
+      "all_hit_probability": 34.3,
+      "power_payout": "3.0x",
+      "flex_payouts": {
+        "2/2": "1.5x"
+      },
+      "expected_value": 3.0,
+      "power_ev": 3.0,
+      "flex_ev": -48.5,
+      "recommended_play": "Power"
+    },
+    {
+      "strategy": "Game Stack: CHAvIND",
+      "size": 2,
+      "picks": [
+        {
+          "player_name": "Miles Bridges",
+          "team": "CHA",
+          "opponent": "IND",
+          "stat_type": "Points",
+          "stat_abbr": "PTS",
+          "direction": "OVER",
+          "line": 15.0,
+          "predicted": 16.3,
+          "edge": 1.3,
+          "confidence": 43
+        },
+        {
+          "player_name": "Brandon Miller",
+          "team": "CHA",
+          "opponent": "IND",
+          "stat_type": "Points",
+          "stat_abbr": "PTS",
+          "direction": "OVER",
+          "line": 19.5,
+          "predicted": 20.7,
+          "edge": 1.2,
+          "confidence": 42
+        }
+      ],
+      "all_hit_probability": 34.2,
+      "power_payout": "3.0x",
+      "flex_payouts": {
+        "2/2": "1.5x"
+      },
+      "expected_value": 2.7,
+      "power_ev": 2.7,
+      "flex_ev": -48.7,
+      "recommended_play": "Power"
+    },
+    {
+      "strategy": "Player Stack: Paolo Banchero",
+      "size": 2,
+      "picks": [
+        {
+          "player_name": "Paolo Banchero",
+          "team": "ORL",
+          "opponent": "DAL",
+          "stat_type": "Rebounds",
+          "stat_abbr": "REB",
+          "direction": "OVER",
+          "line": 8.0,
+          "predicted": 8.7,
+          "edge": 0.7,
+          "confidence": 43
+        },
+        {
+          "player_name": "Paolo Banchero",
+          "team": "ORL",
+          "opponent": "DAL",
+          "stat_type": "Assists",
+          "stat_abbr": "AST",
+          "direction": "OVER",
+          "line": 5.0,
+          "predicted": 5.6,
+          "edge": 0.6,
+          "confidence": 42
+        }
+      ],
+      "all_hit_probability": 34.2,
+      "power_payout": "3.0x",
+      "flex_payouts": {
+        "2/2": "1.5x"
+      },
+      "expected_value": 2.7,
+      "power_ev": 2.7,
+      "flex_ev": -48.7,
+      "recommended_play": "Power"
+    },
+    {
+      "strategy": "Game Stack: NOPvSAC",
+      "size": 2,
+      "picks": [
+        {
+          "player_name": "Zion Williamson",
+          "team": "NOP",
+          "opponent": "SAC",
+          "stat_type": "Points",
+          "stat_abbr": "PTS",
+          "direction": "UNDER",
+          "line": 22.5,
+          "predicted": 20.7,
+          "edge": -1.8,
+          "confidence": 43
+        },
+        {
+          "player_name": "Saddiq Bey",
+          "team": "NOP",
+          "opponent": "SAC",
+          "stat_type": "Points",
+          "stat_abbr": "PTS",
+          "direction": "UNDER",
+          "line": 19.5,
+          "predicted": 18.5,
+          "edge": -1.0,
+          "confidence": 40
+        }
+      ],
+      "all_hit_probability": 34.0,
+      "power_payout": "3.0x",
+      "flex_payouts": {
+        "2/2": "1.5x"
+      },
+      "expected_value": 2.0,
+      "power_ev": 2.0,
+      "flex_ev": -49.0,
+      "recommended_play": "Power"
+    }
+  ],
+  "predictions_count": 55
+}
