@@ -30,7 +30,9 @@ _original_send = nba_http.NBAStatsHTTP.send_api_request
 
 def _patched_send(self, endpoint, parameters, referer=None, proxy=None,
                   headers=None, timeout=None, raise_exception_on_error=False):
-    if timeout is None:
+    # Force minimum 120s timeout — nba_api endpoints default to 30s which
+    # is too short for cloud servers where stats.nba.com is slow
+    if timeout is None or timeout <= 30:
         timeout = 120
     return _original_send(
         self, endpoint, parameters,
