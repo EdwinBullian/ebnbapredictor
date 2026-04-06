@@ -53,7 +53,7 @@ export default function RecordSummary({ record }: RecordSummaryProps) {
           label="Overall"
           wins={overall.wins}
           losses={overall.losses}
-          winPct={overall.win_pct}
+          winPct={overall.win_pct ?? 0}
         />
         {by_stat
           .filter((s) => s.stat_type in statLabels)

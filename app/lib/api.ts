@@ -21,7 +21,10 @@ export async function fetchPredictions(): Promise<PredictionsResponse> {
 
 export async function fetchRecord(days?: number): Promise<RecordResponse> {
   const params = days ? `?days=${days}` : "";
-  return fetchJSON<RecordResponse>(`${BASE_URL}/record${params}`);
+  const raw = await fetchJSON<{ record: RecordResponse; pending_dates: string[] }>(
+    `${BASE_URL}/record${params}`
+  );
+  return { ...raw.record, pending_dates: raw.pending_dates };
 }
 
 export async function fetchHistory(
