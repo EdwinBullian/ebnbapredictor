@@ -55,7 +55,6 @@ export default function RecordTab({ allPredictions }: RecordTabProps) {
     try {
       const res = await updateResults();
       setActionMsg(res.message ?? `Updated ${res.updated} results.`);
-      // Refresh data after update
       const [rec, hist] = await Promise.all([fetchRecord(), fetchHistory(200)]);
       setRecord(rec);
       setHistory(hist.history);
@@ -72,36 +71,35 @@ export default function RecordTab({ allPredictions }: RecordTabProps) {
           {[...Array(4)].map((_, i) => (
             <div
               key={i}
-              className="bg-tv-bg-secondary border border-tv-border rounded-lg p-4 h-24"
+              className="bg-bg-surface border border-border-default p-4 h-24"
             />
           ))}
         </div>
-        <div className="bg-tv-bg-secondary border border-tv-border rounded-lg h-52" />
-        <div className="bg-tv-bg-secondary border border-tv-border rounded-lg h-64" />
+        <div className="bg-bg-surface border border-border-default h-52" />
+        <div className="bg-bg-surface border border-border-default h-64" />
       </div>
     );
   }
 
   return (
     <div className="space-y-4">
-      {/* Action buttons */}
       <div className="flex flex-wrap gap-3 items-center">
         <button
           onClick={handleLock}
-          className="px-4 py-2 bg-tv-accent text-white rounded-lg text-sm font-medium hover:opacity-90 transition-opacity"
+          className="px-4 py-2 bg-t-green text-bg-primary text-sm font-code font-bold hover:opacity-90 transition-opacity cursor-pointer"
         >
           Lock Predictions
         </button>
         <button
           onClick={handleUpdate}
-          className="px-4 py-2 bg-tv-bg-secondary border border-tv-border text-tv-text rounded-lg text-sm font-medium hover:bg-tv-bg transition-colors"
+          className="px-4 py-2 bg-bg-surface border border-border-default text-text-primary text-sm font-code font-medium hover:bg-bg-elevated transition-colors cursor-pointer"
         >
           Update Results
         </button>
         {actionMsg && (
           <p
-            className={`text-sm ${
-              actionError ? "text-red-400" : "text-green-400"
+            className={`text-sm font-code ${
+              actionError ? "text-t-red" : "text-t-green"
             }`}
           >
             {actionMsg}
@@ -109,15 +107,12 @@ export default function RecordTab({ allPredictions }: RecordTabProps) {
         )}
       </div>
 
-      {/* Summary cards */}
       {record && <RecordSummary record={record} />}
 
-      {/* Equity curve */}
       {record && record.recent_days.length >= 2 && (
         <EquityCurve recentDays={record.recent_days} />
       )}
 
-      {/* History table */}
       <HistoryTable history={history} />
     </div>
   );

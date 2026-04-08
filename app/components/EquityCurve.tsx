@@ -38,9 +38,9 @@ const CustomTooltip = ({
 }) => {
   if (!active || !payload || payload.length === 0) return null;
   return (
-    <div className="bg-tv-bg-secondary border border-tv-border rounded px-3 py-2 text-sm">
-      <p className="text-tv-text-muted">{label}</p>
-      <p className="text-green-400 font-semibold">
+    <div className="bg-bg-surface border border-border-default px-3 py-2 text-sm font-code">
+      <p className="text-text-muted">{label}</p>
+      <p className="text-t-green font-semibold">
         {payload[0].value.toFixed(1)}%
       </p>
     </div>
@@ -50,10 +50,8 @@ const CustomTooltip = ({
 export default function EquityCurve({ recentDays }: EquityCurveProps) {
   if (recentDays.length < 2) return null;
 
-  // Reverse to chronological order
   const chronological = [...recentDays].reverse();
 
-  // Accumulate wins/total for cumulative win%
   let cumWins = 0;
   let cumTotal = 0;
   const data: ChartPoint[] = chronological.map((day) => {
@@ -66,8 +64,8 @@ export default function EquityCurve({ recentDays }: EquityCurveProps) {
   });
 
   return (
-    <div className="bg-tv-bg-secondary border border-tv-border rounded-lg p-4">
-      <p className="text-tv-text-muted text-xs uppercase tracking-wide mb-4">
+    <div className="bg-bg-surface border border-border-default p-4">
+      <p className="text-text-muted text-[10px] font-code uppercase tracking-[0.08em] mb-4">
         Cumulative Hit Rate
       </p>
       <ResponsiveContainer width="100%" height={200}>
@@ -96,10 +94,10 @@ export default function EquityCurve({ recentDays }: EquityCurveProps) {
           <Line
             type="monotone"
             dataKey="winPct"
-            stroke="#26a69a"
+            stroke="#00FF66"
             strokeWidth={2}
             dot={false}
-            activeDot={{ r: 4, fill: "#26a69a" }}
+            activeDot={{ r: 4, fill: "#00FF66" }}
           />
         </LineChart>
       </ResponsiveContainer>

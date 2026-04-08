@@ -5,9 +5,9 @@ interface RecordSummaryProps {
 }
 
 function winPctColor(pct: number): string {
-  if (pct >= 0.55) return "text-green-400";
-  if (pct >= 0.5) return "text-yellow-400";
-  return "text-red-400";
+  if (pct >= 0.55) return "text-t-green";
+  if (pct >= 0.5) return "text-accent-amber";
+  return "text-t-red";
 }
 
 function StatCard({
@@ -23,14 +23,14 @@ function StatCard({
 }) {
   const color = winPctColor(winPct);
   return (
-    <div className="bg-tv-bg-secondary border border-tv-border rounded-lg p-4">
-      <p className="text-tv-text-muted text-xs uppercase tracking-wide mb-2">
+    <div className="bg-bg-surface border border-border-default p-4">
+      <p className="text-text-muted text-[10px] font-code uppercase tracking-[0.08em] mb-2">
         {label}
       </p>
-      <p className="text-tv-text text-lg font-semibold">
+      <p className="text-text-primary text-lg font-code font-semibold">
         {wins}-{losses}
       </p>
-      <p className={`text-sm font-medium ${color}`}>
+      <p className={`text-sm font-code font-medium ${color}`}>
         {(winPct * 100).toFixed(1)}%
       </p>
     </div>
@@ -67,14 +67,14 @@ export default function RecordSummary({ record }: RecordSummaryProps) {
             />
           ))}
         {overall.pending > 0 && (
-          <div className="bg-tv-bg-secondary border border-tv-border rounded-lg p-4">
-            <p className="text-tv-text-muted text-xs uppercase tracking-wide mb-2">
+          <div className="bg-bg-surface border border-border-default p-4">
+            <p className="text-text-muted text-[10px] font-code uppercase tracking-[0.08em] mb-2">
               Pending
             </p>
-            <p className="text-yellow-400 text-lg font-semibold">
+            <p className="text-accent-amber text-lg font-code font-semibold">
               {overall.pending}
             </p>
-            <p className="text-tv-text-muted text-sm">awaiting results</p>
+            <p className="text-text-muted text-sm font-code">awaiting results</p>
           </div>
         )}
       </div>

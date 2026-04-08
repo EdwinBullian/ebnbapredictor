@@ -17,28 +17,45 @@ interface NavbarProps {
 
 export default function Navbar({ activeTab, onTabChange }: NavbarProps) {
   const today = new Date().toLocaleDateString("en-US", {
-    weekday: "short", month: "short", day: "numeric", year: "numeric",
+    weekday: "short",
+    month: "short",
+    day: "numeric",
+    year: "numeric",
   });
 
   return (
-    <nav className="flex items-center justify-between px-4 py-3 bg-tv-bg-secondary border-b border-tv-border">
+    <nav className="h-12 bg-bg-header border-b border-border-default flex items-center justify-between px-5 sticky top-0 z-50">
       <div className="flex items-center gap-2">
-        <span className="text-tv-blue font-bold text-lg tracking-tight">EB</span>
-        <span className="text-tv-text font-semibold text-sm hidden sm:inline">NBA Predictor</span>
+        <span
+          className="font-code text-lg font-bold text-t-green"
+          style={{ textShadow: "0 0 12px rgba(0,255,102,0.3)" }}
+        >
+          EB
+        </span>
+        <span className="font-ui text-sm text-text-secondary hidden sm:inline">
+          NBA Predictor
+        </span>
       </div>
-      <div className="flex gap-1">
+
+      <div className="flex h-full">
         {TABS.map((tab) => (
-          <button key={tab.key} onClick={() => onTabChange(tab.key)}
-            className={`px-3 py-1.5 rounded text-xs font-medium transition-colors ${
+          <button
+            key={tab.key}
+            onClick={() => onTabChange(tab.key)}
+            className={`px-4 h-full font-code text-xs font-semibold tracking-[0.1em] uppercase transition-colors border-b-2 cursor-pointer ${
               activeTab === tab.key
-                ? "bg-tv-blue text-white"
-                : "bg-tv-bg-tertiary text-tv-text-secondary hover:text-tv-text"
-            }`}>
+                ? "text-text-primary border-t-green"
+                : "text-text-secondary border-transparent hover:text-text-primary"
+            }`}
+          >
             {tab.label}
           </button>
         ))}
       </div>
-      <div className="text-tv-text-secondary text-xs hidden md:block">{today}</div>
+
+      <div className="font-code text-xs text-text-secondary hidden md:block">
+        {today}
+      </div>
     </nav>
   );
 }

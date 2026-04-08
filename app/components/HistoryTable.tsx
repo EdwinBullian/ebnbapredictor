@@ -33,17 +33,17 @@ export default function HistoryTable({ history }: HistoryTableProps) {
   const filters: StatFilter[] = ["All", "PTS", "REB", "AST"];
 
   return (
-    <div className="bg-tv-bg-secondary border border-tv-border rounded-lg overflow-hidden">
+    <div className="bg-bg-surface border border-border-default overflow-hidden">
       {/* Filter bar */}
-      <div className="flex gap-2 p-3 border-b border-tv-border">
+      <div className="flex gap-2 p-3 border-b border-border-default">
         {filters.map((f) => (
           <button
             key={f}
             onClick={() => setFilter(f)}
-            className={`px-3 py-1 rounded text-sm font-medium transition-colors ${
+            className={`px-3 py-1 text-xs font-code font-semibold uppercase tracking-[0.05em] transition-colors cursor-pointer ${
               filter === f
-                ? "bg-tv-accent text-white"
-                : "text-tv-text-muted hover:text-tv-text hover:bg-tv-bg"
+                ? "bg-t-green text-bg-primary"
+                : "text-text-muted hover:text-text-primary hover:bg-bg-elevated"
             }`}
           >
             {f}
@@ -53,19 +53,19 @@ export default function HistoryTable({ history }: HistoryTableProps) {
 
       {/* Table */}
       {filtered.length === 0 ? (
-        <div className="py-12 text-center text-tv-text-muted text-sm">
+        <div className="py-12 text-center text-text-muted text-sm font-code">
           No history entries found.
         </div>
       ) : (
         <div className="overflow-y-auto max-h-96">
           <table className="w-full text-sm">
-            <thead className="sticky top-0 bg-tv-bg-secondary border-b border-tv-border">
+            <thead className="sticky top-0 bg-bg-header border-b border-border-bright">
               <tr>
                 {["Date", "Player", "Stat", "Pred", "Line", "Dir", "Actual", "Result"].map(
                   (h) => (
                     <th
                       key={h}
-                      className="text-left text-tv-text-muted text-xs uppercase px-3 py-2 font-medium"
+                      className="text-left text-text-secondary text-[11px] font-code uppercase tracking-[0.05em] px-3 py-2.5 font-medium"
                     >
                       {h}
                     </th>
@@ -77,45 +77,44 @@ export default function HistoryTable({ history }: HistoryTableProps) {
               {filtered.map((entry) => {
                 const isPending = entry.actual === null;
                 const isWin = entry.correct === 1;
-                const isLoss = entry.correct === 0;
 
                 const resultCell = isPending ? (
-                  <span className="text-yellow-400">...</span>
+                  <span className="text-accent-amber font-code">...</span>
                 ) : isWin ? (
-                  <span className="text-green-400 font-semibold">W</span>
+                  <span className="text-t-green font-code font-semibold">W</span>
                 ) : (
-                  <span className="text-red-400 font-semibold">L</span>
+                  <span className="text-t-red font-code font-semibold">L</span>
                 );
 
                 const dirColor =
                   entry.direction === "OVER"
-                    ? "text-green-400"
+                    ? "text-t-green"
                     : entry.direction === "UNDER"
-                    ? "text-red-400"
-                    : "text-tv-text-muted";
+                    ? "text-t-red"
+                    : "text-text-muted";
 
                 return (
                   <tr
                     key={entry.id}
-                    className="border-b border-tv-border last:border-0 hover:bg-tv-bg transition-colors"
+                    className="border-b border-border-default last:border-0 hover:bg-bg-elevated transition-colors"
                   >
-                    <td className="px-3 py-2 text-tv-text-muted whitespace-nowrap">
+                    <td className="px-3 py-2 text-text-muted font-code text-xs whitespace-nowrap">
                       {entry.date}
                     </td>
-                    <td className="px-3 py-2 text-tv-text font-medium whitespace-nowrap">
+                    <td className="px-3 py-2 text-text-primary font-ui font-medium whitespace-nowrap">
                       {entry.player_name}
                     </td>
-                    <td className="px-3 py-2 text-tv-text-muted">
+                    <td className="px-3 py-2 text-text-secondary font-code text-xs">
                       {STAT_ABBR[entry.stat_type] ?? entry.stat_type}
                     </td>
-                    <td className="px-3 py-2 text-tv-text">{entry.predicted}</td>
-                    <td className="px-3 py-2 text-tv-text">{entry.line}</td>
-                    <td className={`px-3 py-2 font-medium ${dirColor}`}>
+                    <td className="px-3 py-2 text-text-primary font-code">{entry.predicted}</td>
+                    <td className="px-3 py-2 text-text-primary font-code">{entry.line}</td>
+                    <td className={`px-3 py-2 font-code font-medium ${dirColor}`}>
                       {entry.direction}
                     </td>
-                    <td className="px-3 py-2 text-tv-text">
+                    <td className="px-3 py-2 text-text-primary font-code">
                       {entry.actual !== null ? entry.actual : (
-                        <span className="text-yellow-400">—</span>
+                        <span className="text-accent-amber">&mdash;</span>
                       )}
                     </td>
                     <td className="px-3 py-2">{resultCell}</td>

@@ -1,37 +1,48 @@
 @import "tailwindcss";
 
 @theme {
-  --color-tv-bg: #131722;
-  --color-tv-bg-secondary: #1e222d;
-  --color-tv-bg-tertiary: #2a2e39;
-  --color-tv-text: #d1d4dc;
-  --color-tv-text-secondary: #787b86;
-  --color-tv-border: #363a45;
-  --color-tv-green: #26a69a;
-  --color-tv-green-bg: #1b2a1b;
-  --color-tv-red: #ef5350;
-  --color-tv-red-bg: #2a1b1b;
-  --color-tv-blue: #2962ff;
-  --color-tv-blue-hover: #1e53e5;
+  --color-bg-primary: #0A0A0A;
+  --color-bg-surface: #111111;
+  --color-bg-elevated: #1A1A1A;
+  --color-bg-header: #0D0D0D;
+  --color-t-green: #00FF66;
+  --color-t-green-dim: rgba(0, 255, 102, 0.12);
+  --color-t-green-bar: rgba(0, 255, 102, 0.25);
+  --color-t-red: #FF3B3B;
+  --color-t-red-dim: rgba(255, 59, 59, 0.12);
+  --color-t-red-bar: rgba(255, 59, 59, 0.25);
+  --color-accent-blue: #3B82F6;
+  --color-accent-amber: #F59E0B;
+  --color-text-primary: #E8E8E8;
+  --color-text-secondary: #888888;
+  --color-text-muted: #555555;
+  --color-border-default: #222222;
+  --color-border-bright: #333333;
+  --font-code: 'Fira Code', monospace;
+  --font-ui: 'Fira Sans', sans-serif;
 }
 
 body {
-  background-color: var(--color-tv-bg);
-  color: var(--color-tv-text);
-  font-family: "Inter", system-ui, sans-serif;
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  font-family: var(--font-ui);
 }
 
+/* Dark scrollbars */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--color-tv-bg);
+  background: var(--color-bg-primary);
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--color-tv-border);
-  border-radius: 4px;
+  background: var(--color-border-bright);
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-tv-text-secondary);
+  background: var(--color-text-muted);
 }
+
+/* Hidden scrollbar utility */
+.hide-scrollbar::-webkit-scrollbar { display: none; }
+.hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
