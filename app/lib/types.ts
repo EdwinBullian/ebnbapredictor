@@ -62,6 +62,7 @@ export interface PredictionsResponse {
   predictions_count?: number;
   message?: string;
   error?: string;
+  loading?: boolean;
 }
 
 export interface RecordOverall {
