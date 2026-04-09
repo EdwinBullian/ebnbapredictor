@@ -139,6 +139,19 @@ def _build_tonight_features(top_players, games, stat_type):
     if "TEAM" in features_df.columns and "home_away" not in features_df.columns:
         features_df["home_away"] = features_df["TEAM"].apply(lambda t: 1 if t in home_teams else 0)
 
+    # Build last_5_<stat> column from raw game logs
+    stat_col_map = {"Points": "PTS", "Rebounds": "REB", "Assists": "AST"}
+    last5_col_map = {"Points": "last_5_pts", "Rebounds": "last_5_reb", "Assists": "last_5_ast"}
+    game_stat_col = stat_col_map.get(stat_type)
+    last5_col_name = last5_col_map.get(stat_type)
+    if game_stat_col and last5_col_name and "PLAYER_ID" in features_df.columns:
+        last5_map = {}
+        for pid, group in combined_logs.groupby("PLAYER_ID"):
+            sorted_logs = group.sort_values("GAME_DATE", ascending=False).head(5)
+            vals = sorted_logs[game_stat_col].astype(int).tolist() if game_stat_col in sorted_logs.columns else []
+            last5_map[pid] = ",".join(str(v) for v in vals)
+        features_df[last5_col_name] = features_df["PLAYER_ID"].map(last5_map).fillna("")
+
     return features_df
 
 
