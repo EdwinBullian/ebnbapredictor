@@ -8,6 +8,7 @@ from flask import Flask, jsonify, request
 from flask_cors import CORS
 from datetime import datetime
 import threading
+import time
 import os
 import sys
 import traceback
@@ -76,6 +77,28 @@ ODDS_TTL = 900  # seconds (15 min)
 
 def _generate_predictions():
     """Generate model predictions for today.  Runs in a background thread."""
+    today = datetime.now().strftime("%Y-%m-%d")
+    print(f"[{today}] Generating predictions …")
+
+    max_retries = 3
+    for attempt in range(max_retries):
+        try:
+            return _generate_predictions_inner()
+        except Exception as e:
+            if attempt < max_retries - 1:
+                wait = 15 * (attempt + 1)
+                print(f"  Attempt {attempt+1} failed: {e}. Retrying in {wait}s …")
+                time.sleep(wait)
+            else:
+                print(f"  All {max_retries} attempts failed: {e}")
+                traceback.print_exc()
+                with _lock:
+                    _cache["generating"] = False
+                    _cache["error"] = str(e)
+
+
+def _generate_predictions_inner():
+    """Inner prediction logic — called by _generate_predictions with retries."""
     from lib.predict import get_todays_games, generate_predictions
     from lib.data_collection import (
         get_top_scorers,
@@ -85,7 +108,6 @@ def _generate_predictions():
     from generate_predictions import _build_tonight_features
 
     today = datetime.now().strftime("%Y-%m-%d")
-    print(f"[{today}] Generating predictions …")
 
     try:
         games = get_todays_games()

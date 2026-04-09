@@ -11,7 +11,14 @@ def get_todays_games():
     today = datetime.now().strftime("%Y-%m-%d")
 
     time.sleep(0.6)
-    scoreboard = ScoreboardV2(game_date=today)
+    for attempt in range(3):
+        try:
+            scoreboard = ScoreboardV2(game_date=today, timeout=120)
+            break
+        except Exception:
+            if attempt == 2:
+                raise
+            time.sleep(5 * (attempt + 1))
     games_df = scoreboard.get_data_frames()[0]
 
     if len(games_df) == 0:
