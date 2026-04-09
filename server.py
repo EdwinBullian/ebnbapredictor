@@ -7,6 +7,7 @@ PrizePicks odds are refreshed every 15 minutes.
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 from datetime import datetime
+import os
 import threading
 import time
 import os
@@ -75,6 +76,34 @@ _lock = threading.Lock()
 ODDS_TTL = 900  # seconds (15 min)
 
 
+def _load_static_fallback():
+    """Load predictions from data/predictions.json as a fallback."""
+    import json as _json
+    static_path = os.path.join(os.path.dirname(__file__), "data", "predictions.json")
+    if not os.path.exists(static_path):
+        print("  No static fallback file found.")
+        return
+    try:
+        with open(static_path) as f:
+            data = _json.load(f)
+        with _lock:
+            _cache.update(
+                date=data.get("date"),
+                games=data.get("games", []),
+                raw_preds={
+                    "Points": data.get("points", []),
+                    "Rebounds": data.get("rebounds", []),
+                    "Assists": data.get("assists", []),
+                },
+                generating=False,
+                error=None,
+                locked_today=False,
+            )
+        print(f"  Loaded static fallback for {data.get('date')}")
+    except Exception as ex:
+        print(f"  Static fallback failed: {ex}")
+
+
 def _generate_predictions():
     """Generate model predictions for today.  Runs in a background thread."""
     today = datetime.now().strftime("%Y-%m-%d")
@@ -92,9 +121,12 @@ def _generate_predictions():
             else:
                 print(f"  All {max_retries} attempts failed: {e}")
                 traceback.print_exc()
+                # Fall back to static predictions file
+                _load_static_fallback()
                 with _lock:
-                    _cache["generating"] = False
-                    _cache["error"] = str(e)
+                    if _cache["date"] is None:
+                        _cache["generating"] = False
+                        _cache["error"] = str(e)
 
 
 def _generate_predictions_inner():
