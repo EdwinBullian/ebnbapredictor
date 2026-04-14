@@ -10,12 +10,16 @@ const TABS: { key: TabType; label: string }[] = [
   { key: "record", label: "RECORD" },
 ];
 
+export type SeasonMode = "regular" | "playoffs";
+
 interface NavbarProps {
   activeTab: TabType;
   onTabChange: (tab: TabType) => void;
+  seasonMode: SeasonMode;
+  onSeasonModeChange: (mode: SeasonMode) => void;
 }
 
-export default function Navbar({ activeTab, onTabChange }: NavbarProps) {
+export default function Navbar({ activeTab, onTabChange, seasonMode, onSeasonModeChange }: NavbarProps) {
   const today = new Date().toLocaleDateString("en-US", {
     weekday: "short",
     month: "short",
@@ -25,7 +29,7 @@ export default function Navbar({ activeTab, onTabChange }: NavbarProps) {
 
   return (
     <nav className="h-12 bg-bg-header border-b border-border-default flex items-center justify-between px-5 sticky top-0 z-50">
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-3">
         <span
           className="font-code text-lg font-bold text-t-green"
           style={{ textShadow: "0 0 12px rgba(0,255,102,0.3)" }}
@@ -35,6 +39,28 @@ export default function Navbar({ activeTab, onTabChange }: NavbarProps) {
         <span className="font-ui text-sm text-text-secondary hidden sm:inline">
           NBA Predictor
         </span>
+        <div className="flex items-center bg-bg-surface border border-border-default h-7 ml-2">
+          <button
+            onClick={() => onSeasonModeChange("regular")}
+            className={`px-2.5 h-full font-code text-[10px] font-semibold tracking-wider uppercase transition-colors cursor-pointer ${
+              seasonMode === "regular"
+                ? "bg-bg-elevated text-text-primary"
+                : "text-text-muted hover:text-text-secondary"
+            }`}
+          >
+            REG
+          </button>
+          <button
+            onClick={() => onSeasonModeChange("playoffs")}
+            className={`px-2.5 h-full font-code text-[10px] font-semibold tracking-wider uppercase transition-colors cursor-pointer ${
+              seasonMode === "playoffs"
+                ? "bg-accent-amber/20 text-accent-amber border-l border-accent-amber/30"
+                : "text-text-muted hover:text-text-secondary border-l border-border-default"
+            }`}
+          >
+            PLAYOFFS
+          </button>
+        </div>
       </div>
 
       <div className="flex h-full">

@@ -18,7 +18,7 @@ from lib.odds import fetch_all_props, compare_predictions_to_lines, build_parlay
 from lib.data_collection import get_top_scorers, get_top_rebounders, get_top_assisters
 
 
-def _build_tonight_features(top_players, games, stat_type):
+def _build_tonight_features(top_players, games, stat_type, season_type="Regular Season"):
     from lib.data_collection import get_player_game_logs
     from lib.features import (
         build_features, add_opponent_features, add_player_advanced_features,
@@ -52,7 +52,7 @@ def _build_tonight_features(top_players, games, stat_type):
             "PLAYER_NAME": player_row["PLAYER"],
             "TEAM": team_id_to_abbr.get(player_row["TEAM_ID"], player_row.get("TEAM", "")),
         }
-        logs = get_player_game_logs(player_id, seasons=seasons)
+        logs = get_player_game_logs(player_id, seasons=seasons, season_type=season_type)
         if logs is not None and len(logs) > 0:
             logs["PLAYER_ID"] = player_id
             logs["PLAYER_NAME"] = player_row["PLAYER"]

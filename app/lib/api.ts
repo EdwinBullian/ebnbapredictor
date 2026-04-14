@@ -15,8 +15,9 @@ async function fetchJSON<T>(url: string, options?: RequestInit): Promise<T> {
   return res.json();
 }
 
-export async function fetchPredictions(): Promise<PredictionsResponse> {
-  return fetchJSON<PredictionsResponse>(`${BASE_URL}/predictions`);
+export async function fetchPredictions(mode: "regular" | "playoffs" = "regular"): Promise<PredictionsResponse> {
+  const params = mode === "playoffs" ? "?mode=playoffs" : "";
+  return fetchJSON<PredictionsResponse>(`${BASE_URL}/predictions${params}`);
 }
 
 export async function fetchRecord(days?: number): Promise<RecordResponse> {

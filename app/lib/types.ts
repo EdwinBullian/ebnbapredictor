@@ -63,6 +63,7 @@ export interface PredictionsResponse {
   message?: string;
   error?: string;
   loading?: boolean;
+  mode?: "regular" | "playoffs";
 }
 
 export interface RecordOverall {

@@ -23,11 +23,12 @@ CORS(app)
 # Model loading (once at startup)
 # ---------------------------------------------------------------------------
 
-_models = {}
+_models = {}          # regular season models
+_playoff_models = {}  # playoff-specific models
 
 
 def _load_models():
-    global _models
+    global _models, _playoff_models
     from lib.train import (
         load_model as load_pts,
         FEATURE_COLS as PTS_COLS,
@@ -43,7 +44,11 @@ def _load_models():
         FEATURE_COLS as AST_COLS,
         MODEL_PATH as AST_PATH,
     )
+    from lib.train_playoffs import (
+        PTS_PLAYOFF_PATH, REB_PLAYOFF_PATH, AST_PLAYOFF_PATH,
+    )
 
+    # Load regular season models
     for name, loader, cols, path in [
         ("Points", load_pts, PTS_COLS, PTS_PATH),
         ("Rebounds", load_reb, REB_COLS, REB_PATH),
@@ -55,6 +60,19 @@ def _load_models():
                 print(f"  Loaded {name} model")
             except Exception as e:
                 print(f"  Failed to load {name} model: {e}")
+
+    # Load playoff models (same feature cols, different weights)
+    for name, loader, cols, path in [
+        ("Points", load_pts, PTS_COLS, PTS_PLAYOFF_PATH),
+        ("Rebounds", load_reb, REB_COLS, REB_PLAYOFF_PATH),
+        ("Assists", load_ast, AST_COLS, AST_PLAYOFF_PATH),
+    ]:
+        if os.path.exists(path):
+            try:
+                _playoff_models[name] = {"model": loader(path), "feature_cols": cols}
+                print(f"  Loaded {name} PLAYOFF model")
+            except Exception as e:
+                print(f"  Failed to load {name} playoff model: {e}")
 
 
 # ---------------------------------------------------------------------------
@@ -69,6 +87,14 @@ _cache = {
     "error": None,
     "odds": {},
     "odds_ts": None,
+    "locked_today": False,
+}
+_playoff_cache = {
+    "date": None,
+    "games": [],
+    "raw_preds": {"Points": [], "Rebounds": [], "Assists": []},
+    "generating": False,
+    "error": None,
     "locked_today": False,
 }
 _lock = threading.Lock()
@@ -104,15 +130,18 @@ def _load_static_fallback():
         print(f"  Static fallback failed: {ex}")
 
 
-def _generate_predictions():
+def _generate_predictions(mode="regular"):
     """Generate model predictions for today.  Runs in a background thread."""
     today = datetime.now().strftime("%Y-%m-%d")
-    print(f"[{today}] Generating predictions …")
+    label = "PLAYOFF" if mode == "playoffs" else "regular"
+    print(f"[{today}] Generating {label} predictions …")
+
+    cache = _playoff_cache if mode == "playoffs" else _cache
 
     max_retries = 3
     for attempt in range(max_retries):
         try:
-            return _generate_predictions_inner()
+            return _generate_predictions_inner(mode=mode)
         except Exception as e:
             if attempt < max_retries - 1:
                 wait = 15 * (attempt + 1)
@@ -121,15 +150,15 @@ def _generate_predictions():
             else:
                 print(f"  All {max_retries} attempts failed: {e}")
                 traceback.print_exc()
-                # Fall back to static predictions file
-                _load_static_fallback()
+                if mode == "regular":
+                    _load_static_fallback()
                 with _lock:
-                    if _cache["date"] is None:
-                        _cache["generating"] = False
-                        _cache["error"] = str(e)
+                    if cache["date"] is None:
+                        cache["generating"] = False
+                        cache["error"] = str(e) if mode == "regular" else None
 
 
-def _generate_predictions_inner():
+def _generate_predictions_inner(mode="regular"):
     """Inner prediction logic — called by _generate_predictions with retries."""
     from lib.predict import get_todays_games, generate_predictions
     from lib.data_collection import (
@@ -140,6 +169,10 @@ def _generate_predictions_inner():
     from generate_predictions import _build_tonight_features
 
     today = datetime.now().strftime("%Y-%m-%d")
+    is_playoffs = mode == "playoffs"
+    models = _playoff_models if is_playoffs else _models
+    cache = _playoff_cache if is_playoffs else _cache
+    label = "PLAYOFF" if is_playoffs else "regular"
 
     try:
         games = get_todays_games()
@@ -149,11 +182,13 @@ def _generate_predictions_inner():
 
         if not games:
             with _lock:
-                _cache.update(
+                cache.update(
                     date=today, games=[], raw_preds=raw,
-                    generating=False, error=None,
+                    generating=False,
                 )
-            print("  No games today.")
+                if not is_playoffs:
+                    cache["error"] = None
+            print(f"  No games today ({label}).")
             return
 
         player_fns = {
@@ -163,13 +198,16 @@ def _generate_predictions_inner():
         }
 
         for stat_type in ["Points", "Rebounds", "Assists"]:
-            if stat_type not in _models:
+            if stat_type not in models:
                 continue
             try:
-                print(f"  Generating {stat_type} …")
-                info = _models[stat_type]
+                print(f"  Generating {label} {stat_type} …")
+                info = models[stat_type]
                 top_players = player_fns[stat_type](season="2025-26", top_n=50)
-                features = _build_tonight_features(top_players, games, stat_type)
+                features = _build_tonight_features(
+                    top_players, games, stat_type,
+                    season_type="Playoffs" if is_playoffs else "Regular Season",
+                )
                 if features is None or len(features) == 0:
                     print(f"    No features built for {stat_type}")
                     continue
@@ -185,42 +223,53 @@ def _generate_predictions_inner():
                 traceback.print_exc()
 
         with _lock:
-            _cache.update(
+            cache.update(
                 date=today, games=games, raw_preds=raw,
-                generating=False, error=None, locked_today=False,
+                generating=False, locked_today=False,
             )
-        print("  Predictions ready.")
+            if not is_playoffs:
+                cache["error"] = None
+        print(f"  {label.capitalize()} predictions ready.")
 
-        # Auto-grade any pending dates from previous days
-        try:
-            from lib.tracker import fetch_and_update_actuals, get_pending_dates
-            pending = get_pending_dates()
-            if pending:
-                print(f"  Auto-grading {len(pending)} pending date(s): {pending}")
-                result = fetch_and_update_actuals()
-                print(f"  Graded: {result.get('message', '')}")
-        except Exception as e:
-            print(f"  Auto-grade failed (non-fatal): {e}")
+        # Auto-grade only for regular season
+        if not is_playoffs:
+            try:
+                from lib.tracker import fetch_and_update_actuals, get_pending_dates
+                pending = get_pending_dates()
+                if pending:
+                    print(f"  Auto-grading {len(pending)} pending date(s): {pending}")
+                    result = fetch_and_update_actuals()
+                    print(f"  Graded: {result.get('message', '')}")
+            except Exception as e:
+                print(f"  Auto-grade failed (non-fatal): {e}")
 
     except Exception as e:
-        print(f"  Generation failed: {e}")
+        print(f"  Generation failed ({label}): {e}")
         traceback.print_exc()
         with _lock:
-            _cache["generating"] = False
-            _cache["error"] = str(e)
+            cache["generating"] = False
+            if not is_playoffs:
+                cache["error"] = str(e)
 
 
-def _ensure_predictions():
+def _ensure_predictions(mode="regular"):
     """Return True if today's predictions are cached; otherwise kick off generation."""
     today = datetime.now().strftime("%Y-%m-%d")
-    with _lock:
-        if _cache["date"] == today:
-            return True
-        if _cache["generating"]:
-            return False
-        _cache["generating"] = True
+    cache = _playoff_cache if mode == "playoffs" else _cache
+    models = _playoff_models if mode == "playoffs" else _models
 
-    threading.Thread(target=_generate_predictions, daemon=True).start()
+    # If no playoff models are loaded, fall back to regular
+    if mode == "playoffs" and not models:
+        return False
+
+    with _lock:
+        if cache["date"] == today:
+            return True
+        if cache["generating"]:
+            return False
+        cache["generating"] = True
+
+    threading.Thread(target=_generate_predictions, args=(mode,), daemon=True).start()
     return False
 
 
@@ -249,14 +298,17 @@ def _get_odds():
             return dict(_cache["odds"]) if _cache["odds"] else {}
 
 
-def _build_response():
+def _build_response(mode="regular"):
     """Combine cached predictions with fresh PrizePicks odds."""
     from lib.odds import compare_predictions_to_lines, build_parlays
 
+    is_playoffs = mode == "playoffs"
+    cache = _playoff_cache if is_playoffs else _cache
+
     with _lock:
-        raw = {k: list(v) for k, v in _cache["raw_preds"].items()}
-        games = list(_cache["games"])
-        date = _cache["date"]
+        raw = {k: list(v) for k, v in cache["raw_preds"].items()}
+        games = list(cache["games"])
+        date = cache["date"]
 
     odds = _get_odds()
 
@@ -277,18 +329,19 @@ def _build_response():
 
     parlays = build_parlays(all_comparisons) if all_comparisons else []
 
-    # Auto-lock predictions once per day (first time odds are matched)
-    with _lock:
-        already_locked = _cache["locked_today"]
-    if not already_locked and all_comparisons:
-        try:
-            from lib.tracker import save_predictions
-            result = save_predictions(all_comparisons, date=date)
-            with _lock:
-                _cache["locked_today"] = True
-            print(f"  Auto-locked: {result.get('message', '')}")
-        except Exception as e:
-            print(f"  Auto-lock failed (non-fatal): {e}")
+    # Auto-lock predictions once per day (regular season only)
+    if not is_playoffs:
+        with _lock:
+            already_locked = cache["locked_today"]
+        if not already_locked and all_comparisons:
+            try:
+                from lib.tracker import save_predictions
+                result = save_predictions(all_comparisons, date=date)
+                with _lock:
+                    cache["locked_today"] = True
+                print(f"  Auto-locked: {result.get('message', '')}")
+            except Exception as e:
+                print(f"  Auto-lock failed (non-fatal): {e}")
 
     return {
         "date": date,
@@ -298,6 +351,7 @@ def _build_response():
         "assists": results.get("Assists", []),
         "parlays": parlays,
         "predictions_count": len(all_comparisons),
+        "mode": mode,
     }
 
 
@@ -307,7 +361,21 @@ def _build_response():
 
 @app.route("/api/predictions", methods=["GET"])
 def predictions():
-    ready = _ensure_predictions()
+    mode = request.args.get("mode", "regular")
+    if mode == "playoffs" and not _playoff_models:
+        return jsonify({
+            "loading": False,
+            "games": [],
+            "points": [],
+            "rebounds": [],
+            "assists": [],
+            "parlays": [],
+            "predictions_count": 0,
+            "mode": "playoffs",
+            "message": "Playoff models not yet trained. Run train_playoffs.py first.",
+        })
+
+    ready = _ensure_predictions(mode=mode)
 
     if not ready:
         return jsonify({
@@ -318,21 +386,25 @@ def predictions():
             "assists": [],
             "parlays": [],
             "predictions_count": 0,
-            "message": "Generating today's predictions… refresh in ~2 minutes.",
+            "mode": mode,
+            "message": f"Generating today's {'playoff ' if mode == 'playoffs' else ''}predictions… refresh in ~2 minutes.",
         })
 
-    return jsonify(_build_response())
+    return jsonify(_build_response(mode=mode))
 
 
 @app.route("/api/predictions/refresh", methods=["POST"])
 def refresh_predictions():
     """Force-regenerate predictions (e.g. after model update)."""
+    mode = request.args.get("mode", "regular")
+    cache = _playoff_cache if mode == "playoffs" else _cache
     with _lock:
-        _cache["date"] = None
-        _cache["odds"] = {}
-        _cache["odds_ts"] = None
-    _ensure_predictions()
-    return jsonify({"status": "regenerating"})
+        cache["date"] = None
+        if mode == "regular":
+            _cache["odds"] = {}
+            _cache["odds_ts"] = None
+    _ensure_predictions(mode=mode)
+    return jsonify({"status": "regenerating", "mode": mode})
 
 
 @app.route("/api/record", methods=["GET"])
@@ -408,8 +480,11 @@ def health():
         return jsonify({
             "status": "ok",
             "predictions_date": _cache["date"],
+            "playoff_predictions_date": _playoff_cache["date"],
             "generating": _cache["generating"],
+            "generating_playoffs": _playoff_cache["generating"],
             "models_loaded": list(_models.keys()),
+            "playoff_models_loaded": list(_playoff_models.keys()),
         })
 
 
@@ -420,9 +495,13 @@ def health():
 print("Loading models …")
 _load_models()
 print(f"Models ready: {list(_models.keys())}")
+if _playoff_models:
+    print(f"Playoff models ready: {list(_playoff_models.keys())}")
 
 # Kick off prediction generation immediately
 threading.Thread(target=_ensure_predictions, daemon=True).start()
+if _playoff_models:
+    threading.Thread(target=lambda: _ensure_predictions(mode="playoffs"), daemon=True).start()
 
 
 if __name__ == "__main__":

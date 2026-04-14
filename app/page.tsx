@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { fetchPredictions } from "@/app/lib/api";
 import type { PredictionsResponse, TabType, Game, Prediction } from "@/app/lib/types";
-import Navbar from "@/app/components/Navbar";
+import Navbar, { type SeasonMode } from "@/app/components/Navbar";
 import GamesSidebar from "@/app/components/GamesSidebar";
 import TopEdges from "@/app/components/TopEdges";
 import PredictionTable from "@/app/components/PredictionTable";
@@ -13,6 +13,7 @@ import SkeletonLoader from "@/app/components/SkeletonLoader";
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState<TabType>("points");
+  const [seasonMode, setSeasonMode] = useState<SeasonMode>("regular");
   const [data, setData] = useState<PredictionsResponse | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -22,8 +23,12 @@ export default function Home() {
     let cancelled = false;
     let pollTimer: ReturnType<typeof setTimeout> | null = null;
 
+    setLoading(true);
+    setData(null);
+    setError(null);
+
     const load = () => {
-      fetchPredictions()
+      fetchPredictions(seasonMode)
         .then((res) => {
           if (cancelled) return;
           setData(res);
@@ -44,7 +49,7 @@ export default function Home() {
       cancelled = true;
       if (pollTimer) clearTimeout(pollTimer);
     };
-  }, []);
+  }, [seasonMode]);
 
   function getCurrentPredictions(): Prediction[] {
     if (!data) return [];
@@ -69,7 +74,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen flex flex-col bg-bg-primary">
-      <Navbar activeTab={activeTab} onTabChange={setActiveTab} />
+      <Navbar activeTab={activeTab} onTabChange={setActiveTab} seasonMode={seasonMode} onSeasonModeChange={setSeasonMode} />
       <div className="flex flex-1 overflow-hidden">
         <main className="flex-1 overflow-y-auto p-4">
           {error && (
