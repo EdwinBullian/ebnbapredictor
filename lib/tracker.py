@@ -217,8 +217,7 @@ def _grade_single_date(date):
 
         try:
             time.sleep(0.6)
-            from lib.data_collection import NBA_HEADERS
-            log = PlayerGameLog(player_id=player_id, season=season, timeout=120, headers=NBA_HEADERS)
+            log = PlayerGameLog(player_id=player_id, season=season, timeout=20)
             df = log.get_data_frames()[0]
 
             if df.empty:

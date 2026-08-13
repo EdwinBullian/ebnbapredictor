@@ -10,26 +10,15 @@ def get_todays_games():
     """Get list of today's NBA games."""
     today = datetime.now().strftime("%Y-%m-%d")
 
-    custom_headers = {
-        "Host": "stats.nba.com",
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
-        "Accept": "application/json, text/plain, */*",
-        "Accept-Language": "en-US,en;q=0.9",
-        "Referer": "https://www.nba.com/",
-        "Origin": "https://www.nba.com",
-        "Connection": "keep-alive",
-        "x-nba-stats-origin": "stats",
-        "x-nba-stats-token": "true",
-    }
-    time.sleep(0.6)
+    time.sleep(1.2)
     for attempt in range(3):
         try:
-            scoreboard = ScoreboardV2(game_date=today, timeout=120, headers=custom_headers)
+            scoreboard = ScoreboardV2(game_date=today, timeout=20)
             break
         except Exception:
             if attempt == 2:
                 raise
-            time.sleep(10 * (attempt + 1))
+            time.sleep(5 * (attempt + 1))
     games_df = scoreboard.get_data_frames()[0]
 
     if len(games_df) == 0:

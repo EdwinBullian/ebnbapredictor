@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EB NBA Predictor — Mockup</title>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Fira+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --bg-primary: #0A0A0A;
+    --bg-surface: #111111;
+    --bg-elevated: #1A1A1A;
+    --bg-header: #0D0D0D;
+    --green: #00FF66;
+    --green-dim: rgba(0, 255, 102, 0.12);
+    --green-bar: rgba(0, 255, 102, 0.25);
+    --red: #FF3B3B;
+    --red-dim: rgba(255, 59, 59, 0.12);
+    --red-bar: rgba(255, 59, 59, 0.25);
+    --blue: #3B82F6;
+    --amber: #F59E0B;
+    --text-primary: #E8E8E8;
+    --text-secondary: #888888;
+    --text-muted: #555555;
+    --border: #222222;
+    --border-bright: #333333;
+  }
+
+  body {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: 'Fira Sans', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* ── NAVBAR ── */
+  .navbar {
+    height: 48px;
+    background: var(--bg-header);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .nav-brand .eb {
+    font-family: 'Fira Code', monospace;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--green);
+    text-shadow: 0 0 12px rgba(0, 255, 102, 0.3);
+  }
+  .nav-brand .title {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--text-secondary);
+  }
+  .nav-tabs {
+    display: flex;
+    gap: 0;
+    height: 100%;
+  }
+  .nav-tab {
+    font-family: 'Fira Code', monospace;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    padding: 0 16px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: all 0.15s;
+  }
+  .nav-tab:hover {
+    color: var(--text-primary);
+  }
+  .nav-tab.active {
+    color: var(--text-primary);
+    border-bottom-color: var(--green);
+    text-shadow: 0 0 8px rgba(0, 255, 102, 0.15);
+  }
+  .nav-date {
+    font-family: 'Fira Code', monospace;
+    font-size: 12px;
+    color: var(--text-secondary);
+  }
+
+  /* ── LAYOUT ── */
+  .layout {
+    display: flex;
+    height: calc(100vh - 48px);
+  }
+  .main {
+    flex: 1;
+    overflow-y: auto;
+    padding: 16px 20px;
+  }
+  .sidebar {
+    width: 224px;
+    border-left: 1px solid var(--border);
+    background: var(--bg-surface);
+    overflow-y: auto;
+    flex-shrink: 0;
+  }
+
+  /* ── TOP EDGES ── */
+  .top-edges {
+    border: 1px solid rgba(0, 255, 102, 0.15);
+    background: var(--bg-surface);
+    margin-bottom: 16px;
+    padding: 10px 14px;
+  }
+  .top-edges-label {
+    font-family: 'Fira Code', monospace;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--green);
+    margin-bottom: 8px;
+    text-shadow: 0 0 8px rgba(0, 255, 102, 0.2);
+  }
+  .edges-row {
+    display: flex;
+    gap: 2px;
+    overflow-x: auto;
+  }
+  .edge-pill {
+    font-family: 'Fira Code', monospace;
+    font-size: 11px;
+    font-weight: 500;
+    padding: 5px 10px;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    border-right: 1px solid var(--border);
+  }
+  .edge-pill:last-child { border-right: none; }
+  .edge-pill.over { background: var(--green-dim); }
+  .edge-pill.under { background: var(--red-dim); }
+  .edge-pill .name { color: var(--text-primary); }
+  .edge-pill .dir { font-weight: 700; }
+  .edge-pill.over .dir { color: var(--green); }
+  .edge-pill.under .dir { color: var(--red); }
+  .edge-pill .val { color: var(--text-secondary); }
+  .edge-pill .delta { font-weight: 700; }
+  .edge-pill.over .delta { color: var(--green); }
+  .edge-pill.under .delta { color: var(--red); }
+
+  /* ── TABLE ── */
+  .pred-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+  }
+  .pred-table thead th {
+    font-family: 'Fira Code', monospace;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    text-align: left;
+    padding: 10px 12px;
+    background: var(--bg-header);
+    border-bottom: 1px solid var(--border-bright);
+    position: sticky;
+    top: 0;
+    cursor: pointer;
+    user-select: none;
+  }
+  .pred-table thead th:hover { color: var(--text-primary); }
+  .pred-table thead th.sorted { color: var(--green); }
+  .pred-table tbody tr {
+    border-bottom: 1px solid var(--border);
+    cursor: pointer;
+    transition: background 0.1s;
+  }
+  .pred-table tbody tr:hover {
+    background: var(--bg-elevated);
+  }
+  .pred-table td {
+    padding: 10px 12px;
+    vertical-align: middle;
+  }
+  .player-name {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-primary);
+  }
+  .team-code {
+    font-family: 'Fira Code', monospace;
+    font-size: 12px;
+    color: var(--text-secondary);
+  }
+  .val {
+    font-family: 'Fira Code', monospace;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .val-pred { color: var(--text-primary); }
+  .val-line { color: var(--text-secondary); font-weight: 400; }
+  .val-edge { font-weight: 700; }
+  .val-edge.pos { color: var(--green); }
+  .val-edge.neg { color: var(--red); }
+
+  /* confidence pill */
+  .conf-cell { position: relative; width: 64px; }
+  .conf-pill {
+    font-family: 'Fira Code', monospace;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 8px;
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    min-width: 44px;
+    justify-content: center;
+  }
+  .conf-pill.high {
+    background: var(--green-bar);
+    color: var(--green);
+    border: 1px solid rgba(0, 255, 102, 0.3);
+  }
+  .conf-pill.mid {
+    background: rgba(245, 158, 11, 0.2);
+    color: var(--amber);
+    border: 1px solid rgba(245, 158, 11, 0.3);
+  }
+  .conf-pill.low {
+    background: rgba(136, 136, 136, 0.15);
+    color: var(--text-secondary);
+    border: 1px solid var(--border);
+  }
+
+  /* ── EXPANDED ROW ── */
+  .expanded-row td {
+    padding: 0;
+  }
+  .expanded-panel {
+    background: var(--bg-elevated);
+    border-left: 3px solid var(--green);
+    padding: 16px 20px;
+    display: flex;
+    gap: 24px;
+  }
+  .chart-area {
+    flex: 1;
+    min-width: 280px;
+  }
+  .chart-title {
+    font-family: 'Fira Code', monospace;
+    font-size: 11px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-secondary);
+    margin-bottom: 10px;
+  }
+  .chart-mock {
+    height: 120px;
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+    padding: 0 4px;
+    position: relative;
+    border-bottom: 1px solid var(--border);
+  }
+  .chart-mock .line-ref {
+    position: absolute;
+    left: 0;
+    right: 0;
+    border-top: 1px dashed var(--text-muted);
+    z-index: 1;
+  }
+  .chart-mock .line-label {
+    position: absolute;
+    right: 0;
+    font-family: 'Fira Code', monospace;
+    font-size: 10px;
+    color: var(--text-muted);
+    transform: translateY(-12px);
+  }
+  .bar {
+    flex: 1;
+    border-radius: 1px 1px 0 0;
+    position: relative;
+    z-index: 2;
+    min-width: 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .bar .bar-fill {
+    width: 100%;
+    border-radius: 1px 1px 0 0;
+    transition: height 0.3s;
+  }
+  .bar.over .bar-fill {
+    background: var(--green);
+    box-shadow: 0 0 8px rgba(0, 255, 102, 0.3);
+  }
+  .bar.under .bar-fill {
+    background: var(--red);
+    box-shadow: 0 0 8px rgba(255, 59, 59, 0.3);
+  }
+  .bar .bar-val {
+    font-family: 'Fira Code', monospace;
+    font-size: 10px;
+    font-weight: 600;
+    margin-top: 4px;
+    color: var(--text-secondary);
+  }
+  .bar .bar-date {
+    font-family: 'Fira Code', monospace;
+    font-size: 9px;
+    color: var(--text-muted);
+    margin-top: 2px;
+  }
+  .stats-area {
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .stat-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .stat-label {
+    font-family: 'Fira Code', monospace;
+    font-size: 11px;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .stat-value {
+    font-family: 'Fira Code', monospace;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+  .factor-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-top: 4px;
+  }
+  .factor-tag {
+    font-family: 'Fira Code', monospace;
+    font-size: 10px;
+    padding: 2px 6px;
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+  }
+
+  /* ── SIDEBAR ── */
+  .sidebar-header {
+    font-family: 'Fira Code', monospace;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    padding: 14px 16px 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .sidebar-header .arrow { color: var(--text-muted); }
+  .sidebar-all {
+    font-family: 'Fira Code', monospace;
+    font-size: 12px;
+    color: var(--green);
+    padding: 6px 16px 10px;
+    cursor: pointer;
+  }
+  .game-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border-bottom: 1px solid var(--border);
+    cursor: pointer;
+    transition: background 0.1s;
+  }
+  .game-row:hover { background: var(--bg-elevated); }
+  .game-row.selected {
+    border-left: 2px solid var(--green);
+    background: var(--bg-elevated);
+  }
+  .game-team {
+    font-family: 'Fira Code', monospace;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-primary);
+    width: 36px;
+    text-align: center;
+  }
+  .game-at {
+    font-family: 'Fira Code', monospace;
+    font-size: 11px;
+    color: var(--text-muted);
+  }
+
+  /* ── NO LINES SECTION ── */
+  .no-lines-section {
+    margin-top: 12px;
+    border-top: 1px solid var(--border);
+    padding-top: 8px;
+  }
+  .no-lines-header {
+    font-family: 'Fira Code', monospace;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    padding: 8px 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .no-lines-header:hover { color: var(--text-secondary); }
+  .no-lines-count {
+    font-size: 10px;
+    color: var(--text-muted);
+    background: var(--bg-elevated);
+    padding: 1px 5px;
+  }
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-brand">
+    <span class="eb">EB</span>
+    <span class="title">NBA Predictor</span>
+  </div>
+  <div class="nav-tabs">
+    <div class="nav-tab active">PTS</div>
+    <div class="nav-tab">REB</div>
+    <div class="nav-tab">AST</div>
+    <div class="nav-tab">PARLAYS</div>
+    <div class="nav-tab">RECORD</div>
+  </div>
+  <div class="nav-date">Wed, Apr 8, 2026</div>
+</nav>
+
+<!-- LAYOUT -->
+<div class="layout">
+  <div class="main">
+
+    <!-- TOP EDGES -->
+    <div class="top-edges">
+      <div class="top-edges-label">TOP EDGES</div>
+      <div class="edges-row">
+        <div class="edge-pill over">
+          <span class="name">Donovan Mitchell</span>
+          <span class="dir">OVER</span>
+          <span class="val">25.5</span>
+          <span class="delta">(+2.5)</span>
+        </div>
+        <div class="edge-pill over">
+          <span class="name">Kawhi Leonard</span>
+          <span class="dir">OVER</span>
+          <span class="val">25.5</span>
+          <span class="delta">(+2.3)</span>
+        </div>
+        <div class="edge-pill over">
+          <span class="name">Jalen Duren</span>
+          <span class="dir">OVER</span>
+          <span class="val">18.5</span>
+          <span class="delta">(+2.1)</span>
+        </div>
+        <div class="edge-pill over">
+          <span class="name">Nikola Jokic</span>
+          <span class="dir">OVER</span>
+          <span class="val">24.5</span>
+          <span class="delta">(+2.0)</span>
+        </div>
+        <div class="edge-pill over">
+          <span class="name">Jamal Murray</span>
+          <span class="dir">OVER</span>
+          <span class="val">23.5</span>
+          <span class="delta">(+1.7)</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- PREDICTION TABLE -->
+    <table class="pred-table">
+      <thead>
+        <tr>
+          <th>PLAYER</th>
+          <th>TEAM</th>
+          <th>OPP</th>
+          <th>PRED</th>
+          <th>LINE</th>
+          <th>EDGE</th>
+          <th class="sorted">CONF &#9660;</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="player-name">De'Aaron Fox</span></td>
+          <td><span class="team-code">SAS</span></td>
+          <td><span class="team-code">PHI</span></td>
+          <td><span class="val val-pred">16.1</span></td>
+          <td><span class="val val-line">20.5</span></td>
+          <td><span class="val val-edge neg">-4.4</span></td>
+          <td class="conf-cell"><span class="conf-pill high">52%</span></td>
+        </tr>
+        <tr>
+          <td><span class="player-name">Deni Avdija</span></td>
+          <td><span class="team-code">POR</span></td>
+          <td><span class="team-code">DEN</span></td>
+          <td><span class="val val-pred">22.8</span></td>
+          <td><span class="val val-line">25.5</span></td>
+          <td><span class="val val-edge neg">-2.7</span></td>
+          <td class="conf-cell"><span class="conf-pill high">52%</span></td>
+        </tr>
+        <tr>
+          <td><span class="player-name">Nikola Jokic</span></td>
+          <td><span class="team-code">DEN</span></td>
+          <td><span class="team-code">POR</span></td>
+          <td><span class="val val-pred">26.5</span></td>
+          <td><span class="val val-line">24.5</span></td>
+          <td><span class="val val-edge pos">+2.0</span></td>
+          <td class="conf-cell"><span class="conf-pill mid">50%</span></td>
+        </tr>
+
+        <!-- EXPANDED ROW EXAMPLE -->
+        <tr style="background: transparent;">
+          <td><span class="player-name">Donovan Mitchell</span></td>
+          <td><span class="team-code">CLE</span></td>
+          <td><span class="team-code">IND</span></td>
+          <td><span class="val val-pred">28.0</span></td>
+          <td><span class="val val-line">25.5</span></td>
+          <td><span class="val val-edge pos">+2.5</span></td>
+          <td class="conf-cell"><span class="conf-pill high">55%</span></td>
+        </tr>
+        <tr class="expanded-row">
+          <td colspan="7">
+            <div class="expanded-panel">
+              <div class="chart-area">
+                <div class="chart-title">Last 5 Games — Points</div>
+                <div class="chart-mock">
+                  <div class="line-ref" style="bottom: 72px;">
+                    <span class="line-label">LINE 25.5</span>
+                  </div>
+                  <div class="bar over">
+                    <div class="bar-fill" style="height: 85px;"></div>
+                    <span class="bar-val">30</span>
+                    <span class="bar-date">4/1</span>
+                  </div>
+                  <div class="bar under">
+                    <div class="bar-fill" style="height: 60px;"></div>
+                    <span class="bar-val">21</span>
+                    <span class="bar-date">4/3</span>
+                  </div>
+                  <div class="bar over">
+                    <div class="bar-fill" style="height: 95px;"></div>
+                    <span class="bar-val">33</span>
+                    <span class="bar-date">4/4</span>
+                  </div>
+                  <div class="bar over">
+                    <div class="bar-fill" style="height: 78px;"></div>
+                    <span class="bar-val">27</span>
+                    <span class="bar-date">4/5</span>
+                  </div>
+                  <div class="bar over">
+                    <div class="bar-fill" style="height: 82px;"></div>
+                    <span class="bar-val">29</span>
+                    <span class="bar-date">4/7</span>
+                  </div>
+                </div>
+              </div>
+              <div class="stats-area">
+                <div class="stat-row">
+                  <span class="stat-label">Season Avg</span>
+                  <span class="stat-value">24.8</span>
+                </div>
+                <div class="stat-row">
+                  <span class="stat-label">Last 5 Avg</span>
+                  <span class="stat-value" style="color: var(--green);">28.0</span>
+                </div>
+                <div class="stat-row">
+                  <span class="stat-label">Predicted</span>
+                  <span class="stat-value" style="color: var(--green);">28.0</span>
+                </div>
+                <div class="stat-row">
+                  <span class="stat-label">Line</span>
+                  <span class="stat-value">25.5</span>
+                </div>
+                <div class="stat-row" style="border-bottom: none;">
+                  <span class="stat-label">Key Factors</span>
+                </div>
+                <div class="factor-tags">
+                  <span class="factor-tag">Trending above avg</span>
+                  <span class="factor-tag">Home game</span>
+                  <span class="factor-tag">High usage (31%)</span>
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td><span class="player-name">Jalen Duren</span></td>
+          <td><span class="team-code">DET</span></td>
+          <td><span class="team-code">ORL</span></td>
+          <td><span class="val val-pred">20.6</span></td>
+          <td><span class="val val-line">18.5</span></td>
+          <td><span class="val val-edge pos">+2.1</span></td>
+          <td class="conf-cell"><span class="conf-pill mid">41%</span></td>
+        </tr>
+        <tr>
+          <td><span class="player-name">Shai Gilgeous-Alexander</span></td>
+          <td><span class="team-code">OKC</span></td>
+          <td><span class="team-code">LAL</span></td>
+          <td><span class="val val-pred">31.0</span></td>
+          <td><span class="val val-line">29.5</span></td>
+          <td><span class="val val-edge pos">+1.5</span></td>
+          <td class="conf-cell"><span class="conf-pill mid">40%</span></td>
+        </tr>
+        <tr>
+          <td><span class="player-name">Cooper Flagg</span></td>
+          <td><span class="team-code">DAL</span></td>
+          <td><span class="team-code">LAC</span></td>
+          <td><span class="val val-pred">24.1</span></td>
+          <td><span class="val val-line">26.5</span></td>
+          <td><span class="val val-edge neg">-2.4</span></td>
+          <td class="conf-cell"><span class="conf-pill low">39%</span></td>
+        </tr>
+        <tr>
+          <td><span class="player-name">Desmond Bane</span></td>
+          <td><span class="team-code">ORL</span></td>
+          <td><span class="team-code">DET</span></td>
+          <td><span class="val val-pred">20.4</span></td>
+          <td><span class="val val-line">19.5</span></td>
+          <td><span class="val val-edge pos">+0.9</span></td>
+          <td class="conf-cell"><span class="conf-pill low">39%</span></td>
+        </tr>
+        <tr>
+          <td><span class="player-name">Kawhi Leonard</span></td>
+          <td><span class="team-code">LAC</span></td>
+          <td><span class="team-code">DAL</span></td>
+          <td><span class="val val-pred">27.8</span></td>
+          <td><span class="val val-line">25.5</span></td>
+          <td><span class="val val-edge pos">+2.3</span></td>
+          <td class="conf-cell"><span class="conf-pill low">38%</span></td>
+        </tr>
+        <tr>
+          <td><span class="player-name">Julius Randle</span></td>
+          <td><span class="team-code">MIN</span></td>
+          <td><span class="team-code">IND</span></td>
+          <td><span class="val val-pred">21.9</span></td>
+          <td><span class="val val-line">22.5</span></td>
+          <td><span class="val val-edge neg">-0.6</span></td>
+          <td class="conf-cell"><span class="conf-pill low">36%</span></td>
+        </tr>
+        <tr>
+          <td><span class="player-name">Jamal Murray</span></td>
+          <td><span class="team-code">DEN</span></td>
+          <td><span class="team-code">POR</span></td>
+          <td><span class="val val-pred">25.2</span></td>
+          <td><span class="val val-line">23.5</span></td>
+          <td><span class="val val-edge pos">+1.7</span></td>
+          <td class="conf-cell"><span class="conf-pill low">32%</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- NO LINES -->
+    <div class="no-lines-section">
+      <div class="no-lines-header">
+        &#9654; No Lines Available <span class="no-lines-count">4</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <div class="sidebar-header">
+      Today's Games <span class="arrow">&#9654;</span>
+    </div>
+    <div class="sidebar-all">All Games</div>
+
+    <div class="game-row selected">
+      <span class="game-team">ATL</span>
+      <span class="game-at">@</span>
+      <span class="game-team">CLE</span>
+    </div>
+    <div class="game-row">
+      <span class="game-team">MIN</span>
+      <span class="game-at">@</span>
+      <span class="game-team">ORL</span>
+    </div>
+    <div class="game-row">
+      <span class="game-team">MIL</span>
+      <span class="game-at">@</span>
+      <span class="game-team">DET</span>
+    </div>
+    <div class="game-row">
+      <span class="game-team">MEM</span>
+      <span class="game-at">@</span>
+      <span class="game-team">DEN</span>
+    </div>
+    <div class="game-row">
+      <span class="game-team">POR</span>
+      <span class="game-at">@</span>
+      <span class="game-team">SAS</span>
+    </div>
+    <div class="game-row">
+      <span class="game-team">OKC</span>
+      <span class="game-at">@</span>
+      <span class="game-team">LAC</span>
+    </div>
+    <div class="game-row">
+      <span class="game-team">DAL</span>
+      <span class="game-at">@</span>
+      <span class="game-team">PHX</span>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

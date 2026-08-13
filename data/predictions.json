@@ -3246,8 +3246,8 @@
       "direction": "UNDER",
       "edge": -4.4,
       "confidence": 52,
-      "actual": null,
-      "correct": null,
+      "actual": 25.0,
+      "correct": 0,
       "created_at": "2026-04-08T07:53:15.231581"
     },
     {
@@ -3262,8 +3262,8 @@
       "direction": "UNDER",
       "edge": -2.7,
       "confidence": 52,
-      "actual": null,
-      "correct": null,
+      "actual": 29.0,
+      "correct": 0,
       "created_at": "2026-04-08T07:53:15.231589"
     },
     {
@@ -3278,8 +3278,8 @@
       "direction": "OVER",
       "edge": 2.0,
       "confidence": 50,
-      "actual": null,
-      "correct": null,
+      "actual": 14.0,
+      "correct": 0,
       "created_at": "2026-04-08T07:53:15.231591"
     },
     {
@@ -3294,8 +3294,8 @@
       "direction": "OVER",
       "edge": 2.1,
       "confidence": 41,
-      "actual": null,
-      "correct": null,
+      "actual": 21.0,
+      "correct": 1,
       "created_at": "2026-04-08T07:53:15.231593"
     },
     {
@@ -3310,8 +3310,8 @@
       "direction": "OVER",
       "edge": 1.5,
       "confidence": 40,
-      "actual": null,
-      "correct": null,
+      "actual": 20.0,
+      "correct": 0,
       "created_at": "2026-04-08T07:53:15.231594"
     },
     {
@@ -3326,8 +3326,8 @@
       "direction": "OVER",
       "edge": 2.5,
       "confidence": 40,
-      "actual": null,
-      "correct": null,
+      "actual": 31.0,
+      "correct": 1,
       "created_at": "2026-04-08T07:53:15.231595"
     },
     {
@@ -3342,8 +3342,8 @@
       "direction": "UNDER",
       "edge": -2.4,
       "confidence": 39,
-      "actual": null,
-      "correct": null,
+      "actual": 11.0,
+      "correct": 1,
       "created_at": "2026-04-08T07:53:15.231596"
     },
     {
@@ -3358,8 +3358,8 @@
       "direction": "OVER",
       "edge": 0.9,
       "confidence": 39,
-      "actual": null,
-      "correct": null,
+      "actual": 18.0,
+      "correct": 0,
       "created_at": "2026-04-08T07:53:15.231597"
     },
     {
@@ -3374,8 +3374,8 @@
       "direction": "OVER",
       "edge": 2.3,
       "confidence": 38,
-      "actual": null,
-      "correct": null,
+      "actual": 20.0,
+      "correct": 0,
       "created_at": "2026-04-08T07:53:15.231598"
     },
     {
@@ -3390,8 +3390,8 @@
       "direction": "UNDER",
       "edge": -0.6,
       "confidence": 36,
-      "actual": null,
-      "correct": null,
+      "actual": 12.0,
+      "correct": 1,
       "created_at": "2026-04-08T07:53:15.231599"
     },
     {
@@ -3406,8 +3406,8 @@
       "direction": "UNDER",
       "edge": -1.9,
       "confidence": 34,
-      "actual": null,
-      "correct": null,
+      "actual": 30.0,
+      "correct": 0,
       "created_at": "2026-04-08T07:53:15.231600"
     },
     {
@@ -3438,8 +3438,8 @@
       "direction": "OVER",
       "edge": 1.7,
       "confidence": 32,
-      "actual": null,
-      "correct": null,
+      "actual": 26.0,
+      "correct": 1,
       "created_at": "2026-04-08T07:53:15.231602"
     },
     {
@@ -3454,8 +3454,8 @@
       "direction": "UNDER",
       "edge": -0.7,
       "confidence": 32,
-      "actual": null,
-      "correct": null,
+      "actual": 22.0,
+      "correct": 0,
       "created_at": "2026-04-08T07:53:15.231603"
     },
     {
@@ -3470,8 +3470,8 @@
       "direction": "UNDER",
       "edge": -0.2,
       "confidence": 32,
-      "actual": null,
-      "correct": null,
+      "actual": 12.0,
+      "correct": 1,
       "created_at": "2026-04-08T07:53:15.231604"
     },
     {
@@ -3486,8 +3486,8 @@
       "direction": "OVER",
       "edge": 1.6,
       "confidence": 31,
-      "actual": null,
-      "correct": null,
+      "actual": 23.0,
+      "correct": 1,
       "created_at": "2026-04-08T07:53:15.231605"
     },
     {
@@ -3502,8 +3502,8 @@
       "direction": "OVER",
       "edge": 1.6,
       "confidence": 31,
-      "actual": null,
-      "correct": null,
+      "actual": 21.0,
+      "correct": 1,
       "created_at": "2026-04-08T07:53:15.231606"
     },
     {
@@ -3518,8 +3518,8 @@
       "direction": "OVER",
       "edge": 1.3,
       "confidence": 28,
-      "actual": null,
-      "correct": null,
+      "actual": 13.0,
+      "correct": 0,
       "created_at": "2026-04-08T07:53:15.231607"
     },
     {
@@ -3534,8 +3534,8 @@
       "direction": "OVER",
       "edge": 0.1,
       "confidence": 21,
-      "actual": null,
-      "correct": null,
+      "actual": 25.0,
+      "correct": 1,
       "created_at": "2026-04-08T07:53:15.231608"
     },
     {
@@ -3550,8 +3550,8 @@
       "direction": "OVER",
       "edge": 0.5,
       "confidence": 20,
-      "actual": null,
-      "correct": null,
+      "actual": 37.0,
+      "correct": 1,
       "created_at": "2026-04-08T07:53:15.231609"
     },
     {
@@ -3566,8 +3566,8 @@
       "direction": "OVER",
       "edge": 0.5,
       "confidence": 20,
-      "actual": null,
-      "correct": null,
+      "actual": 20.0,
+      "correct": 0,
       "created_at": "2026-04-08T07:53:15.231610"
     },
     {
@@ -3582,8 +3582,8 @@
       "direction": "UNDER",
       "edge": -1.5,
       "confidence": 52,
-      "actual": null,
-      "correct": null,
+      "actual": 5.0,
+      "correct": 1,
       "created_at": "2026-04-08T07:53:15.231611"
     },
     {
@@ -3598,8 +3598,8 @@
       "direction": "OVER",
       "edge": 1.0,
       "confidence": 48,
-      "actual": null,
-      "correct": null,
+      "actual": 9.0,
+      "correct": 0,
       "created_at": "2026-04-08T07:53:15.231612"
     },
     {
@@ -3614,8 +3614,8 @@
       "direction": "OVER",
       "edge": 0.9,
       "confidence": 46,
-      "actual": null,
-      "correct": null,
+      "actual": 8.0,
+      "correct": 0,
       "created_at": "2026-04-08T07:53:15.231613"
     },
     {
@@ -3630,8 +3630,8 @@
       "direction": "OVER",
       "edge": 0.8,
       "confidence": 44,
-      "actual": null,
-      "correct": null,
+      "actual": 5.0,
+      "correct": 0,
       "created_at": "2026-04-08T07:53:15.231615"
     },
     {
@@ -3646,8 +3646,8 @@
       "direction": "OVER",
       "edge": 0.8,
       "confidence": 44,
-      "actual": null,
-      "correct": null,
+      "actual": 6.0,
+      "correct": 0,
       "created_at": "2026-04-08T07:53:15.231616"
     },
     {
@@ -3662,8 +3662,8 @@
       "direction": "OVER",
       "edge": 0.6,
       "confidence": 41,
-      "actual": null,
-      "correct": null,
+      "actual": 19.0,
+      "correct": 1,
       "created_at": "2026-04-08T07:53:15.231617"
     },
     {
@@ -3678,8 +3678,8 @@
       "direction": "OVER",
       "edge": 0.5,
       "confidence": 39,
-      "actual": null,
-      "correct": null,
+      "actual": 8.0,
+      "correct": 1,
       "created_at": "2026-04-08T07:53:15.231618"
     },
     {
@@ -3710,8 +3710,8 @@
       "direction": "UNDER",
       "edge": -0.7,
       "confidence": 38,
-      "actual": null,
-      "correct": null,
+      "actual": 11.0,
+      "correct": 1,
       "created_at": "2026-04-08T07:53:15.231621"
     },
     {
@@ -3726,8 +3726,8 @@
       "direction": "OVER",
       "edge": 0.4,
       "confidence": 37,
-      "actual": null,
-      "correct": null,
+      "actual": 11.0,
+      "correct": 1,
       "created_at": "2026-04-08T07:53:15.231622"
     },
     {
@@ -3742,8 +3742,8 @@
       "direction": "UNDER",
       "edge": -0.3,
       "confidence": 35,
-      "actual": null,
-      "correct": null,
+      "actual": 5.0,
+      "correct": 1,
       "created_at": "2026-04-08T07:53:15.231623"
     },
     {
@@ -3774,8 +3774,8 @@
       "direction": "OVER",
       "edge": 0.4,
       "confidence": 32,
-      "actual": null,
-      "correct": null,
+      "actual": 7.0,
+      "correct": 0,
       "created_at": "2026-04-08T07:53:15.231625"
     },
     {
@@ -3790,8 +3790,8 @@
       "direction": "OVER",
       "edge": 0.1,
       "confidence": 32,
-      "actual": null,
-      "correct": null,
+      "actual": 7.0,
+      "correct": 0,
       "created_at": "2026-04-08T07:53:15.231626"
     },
     {
@@ -3806,8 +3806,8 @@
       "direction": "OVER",
       "edge": 0.6,
       "confidence": 31,
-      "actual": null,
-      "correct": null,
+      "actual": 6.0,
+      "correct": 1,
       "created_at": "2026-04-08T07:53:15.231627"
     },
     {
@@ -3822,8 +3822,8 @@
       "direction": "UNDER",
       "edge": 0.0,
       "confidence": 30,
-      "actual": null,
-      "correct": null,
+      "actual": 11.0,
+      "correct": 0,
       "created_at": "2026-04-08T07:53:15.231628"
     },
     {
@@ -3838,8 +3838,8 @@
       "direction": "UNDER",
       "edge": 0.0,
       "confidence": 30,
-      "actual": null,
-      "correct": null,
+      "actual": 7.0,
+      "correct": 1,
       "created_at": "2026-04-08T07:53:15.231629"
     },
     {
@@ -3854,8 +3854,8 @@
       "direction": "OVER",
       "edge": 0.1,
       "confidence": 22,
-      "actual": null,
-      "correct": null,
+      "actual": 14.0,
+      "correct": 1,
       "created_at": "2026-04-08T07:53:15.231630"
     },
     {
@@ -3870,8 +3870,8 @@
       "direction": "UNDER",
       "edge": -0.1,
       "confidence": 22,
-      "actual": null,
-      "correct": null,
+      "actual": 16.0,
+      "correct": 0,
       "created_at": "2026-04-08T07:53:15.231631"
     },
     {
@@ -3902,8 +3902,8 @@
       "direction": "UNDER",
       "edge": -0.7,
       "confidence": 44,
-      "actual": null,
-      "correct": null,
+      "actual": 3.0,
+      "correct": 1,
       "created_at": "2026-04-08T07:53:15.231633"
     },
     {
@@ -3918,8 +3918,8 @@
       "direction": "OVER",
       "edge": 0.7,
       "confidence": 44,
-      "actual": null,
-      "correct": null,
+      "actual": 4.0,
+      "correct": 0,
       "created_at": "2026-04-08T07:53:15.231634"
     },
     {
@@ -3934,8 +3934,8 @@
       "direction": "OVER",
       "edge": 0.7,
       "confidence": 44,
-      "actual": null,
-      "correct": null,
+      "actual": 4.0,
+      "correct": 0,
       "created_at": "2026-04-08T07:53:15.231635"
     },
     {
@@ -3950,8 +3950,8 @@
       "direction": "OVER",
       "edge": 1.1,
       "confidence": 42,
-      "actual": null,
-      "correct": null,
+      "actual": 10.0,
+      "correct": 1,
       "created_at": "2026-04-08T07:53:15.231636"
     },
     {
@@ -3966,8 +3966,8 @@
       "direction": "OVER",
       "edge": 0.5,
       "confidence": 40,
-      "actual": null,
-      "correct": null,
+      "actual": 6.0,
+      "correct": 0,
       "created_at": "2026-04-08T07:53:15.231637"
     },
     {
@@ -3982,8 +3982,8 @@
       "direction": "UNDER",
       "edge": -0.6,
       "confidence": 37,
-      "actual": null,
-      "correct": null,
+      "actual": 10.0,
+      "correct": 1,
       "created_at": "2026-04-08T07:53:15.231639"
     },
     {
@@ -3998,8 +3998,8 @@
       "direction": "OVER",
       "edge": 0.5,
       "confidence": 35,
-      "actual": null,
-      "correct": null,
+      "actual": 11.0,
+      "correct": 1,
       "created_at": "2026-04-08T07:53:15.231640"
     },
     {
@@ -4014,8 +4014,8 @@
       "direction": "OVER",
       "edge": 0.3,
       "confidence": 31,
-      "actual": null,
-      "correct": null,
+      "actual": 6.0,
+      "correct": 1,
       "created_at": "2026-04-08T07:53:15.231641"
     },
     {
@@ -4030,8 +4030,8 @@
       "direction": "OVER",
       "edge": 0.3,
       "confidence": 31,
-      "actual": null,
-      "correct": null,
+      "actual": 7.0,
+      "correct": 1,
       "created_at": "2026-04-08T07:53:15.231642"
     },
     {
@@ -4062,8 +4062,8 @@
       "direction": "OVER",
       "edge": 0.1,
       "confidence": 27,
-      "actual": null,
-      "correct": null,
+      "actual": 6.0,
+      "correct": 0,
       "created_at": "2026-04-08T07:53:15.231643"
     },
     {
@@ -4078,8 +4078,8 @@
       "direction": "UNDER",
       "edge": -2.4,
       "confidence": 0,
-      "actual": null,
-      "correct": null,
+      "actual": 6.0,
+      "correct": 1,
       "created_at": "2026-04-08T07:53:15.231645"
     },
     {
@@ -4094,8 +4094,8 @@
       "direction": "UNDER",
       "edge": -2.6,
       "confidence": 0,
-      "actual": null,
-      "correct": null,
+      "actual": 2.0,
+      "correct": 1,
       "created_at": "2026-04-08T07:53:15.231646"
     },
     {
@@ -4110,8 +4110,8 @@
       "direction": "UNDER",
       "edge": -2.7,
       "confidence": 0,
-      "actual": null,
-      "correct": null,
+      "actual": 9.0,
+      "correct": 0,
       "created_at": "2026-04-08T07:53:15.231647"
     },
     {
@@ -4126,8 +4126,8 @@
       "direction": "UNDER",
       "edge": -2.3,
       "confidence": 0,
-      "actual": null,
-      "correct": null,
+      "actual": 6.0,
+      "correct": 1,
       "created_at": "2026-04-08T07:53:15.231648"
     },
     {
@@ -4142,8 +4142,8 @@
       "direction": "UNDER",
       "edge": -2.3,
       "confidence": 0,
-      "actual": null,
-      "correct": null,
+      "actual": 5.0,
+      "correct": 1,
       "created_at": "2026-04-08T07:53:15.231648"
     },
     {
@@ -4158,8 +4158,8 @@
       "direction": "UNDER",
       "edge": -2.3,
       "confidence": 0,
-      "actual": null,
-      "correct": null,
+      "actual": 6.0,
+      "correct": 1,
       "created_at": "2026-04-08T07:53:15.231650"
     },
     {
@@ -4174,10 +4174,570 @@
       "direction": "UNDER",
       "edge": -1.4,
       "confidence": 0,
+      "actual": 6.0,
+      "correct": 1,
+      "created_at": "2026-04-08T07:53:15.231650"
+    },
+    {
+      "id": 60,
+      "date": "2026-04-14",
+      "player_name": "Kon Knueppel",
+      "team": "CHA",
+      "opponent": "NYK",
+      "stat_type": "Points",
+      "predicted": 16.1,
+      "line": 18.5,
+      "direction": "UNDER",
+      "edge": -2.4,
+      "confidence": 44,
       "actual": null,
       "correct": null,
-      "created_at": "2026-04-08T07:53:15.231650"
+      "created_at": "2026-04-14T08:03:42.185977"
+    },
+    {
+      "id": 61,
+      "date": "2026-04-14",
+      "player_name": "Deni Avdija",
+      "team": "POR",
+      "opponent": "SAC",
+      "stat_type": "Points",
+      "predicted": 26.4,
+      "line": 24.5,
+      "direction": "OVER",
+      "edge": 1.9,
+      "confidence": 44,
+      "actual": null,
+      "correct": null,
+      "created_at": "2026-04-14T08:03:42.185986"
+    },
+    {
+      "id": 62,
+      "date": "2026-04-14",
+      "player_name": "Bam Adebayo",
+      "team": "MIA",
+      "opponent": "ATL",
+      "stat_type": "Points",
+      "predicted": 21.6,
+      "line": 20.5,
+      "direction": "OVER",
+      "edge": 1.1,
+      "confidence": 41,
+      "actual": null,
+      "correct": null,
+      "created_at": "2026-04-14T08:03:42.185988"
+    },
+    {
+      "id": 63,
+      "date": "2026-04-14",
+      "player_name": "Miles Bridges",
+      "team": "CHA",
+      "opponent": "NYK",
+      "stat_type": "Points",
+      "predicted": 14.8,
+      "line": 15.0,
+      "direction": "UNDER",
+      "edge": -0.2,
+      "confidence": 37,
+      "actual": null,
+      "correct": null,
+      "created_at": "2026-04-14T08:03:42.185990"
+    },
+    {
+      "id": 64,
+      "date": "2026-04-14",
+      "player_name": "Norman Powell",
+      "team": "MIA",
+      "opponent": "ATL",
+      "stat_type": "Points",
+      "predicted": 16.5,
+      "line": 17.5,
+      "direction": "UNDER",
+      "edge": -1.0,
+      "confidence": 25,
+      "actual": null,
+      "correct": null,
+      "created_at": "2026-04-14T08:03:42.185991"
+    },
+    {
+      "id": 65,
+      "date": "2026-04-14",
+      "player_name": "LaMelo Ball",
+      "team": "CHA",
+      "opponent": "NYK",
+      "stat_type": "Points",
+      "predicted": 22.6,
+      "line": 23.5,
+      "direction": "UNDER",
+      "edge": -0.9,
+      "confidence": 24,
+      "actual": null,
+      "correct": null,
+      "created_at": "2026-04-14T08:03:42.185992"
+    },
+    {
+      "id": 66,
+      "date": "2026-04-14",
+      "player_name": "Brandon Miller",
+      "team": "CHA",
+      "opponent": "NYK",
+      "stat_type": "Points",
+      "predicted": 19.7,
+      "line": 20.5,
+      "direction": "UNDER",
+      "edge": -0.8,
+      "confidence": 23,
+      "actual": null,
+      "correct": null,
+      "created_at": "2026-04-14T08:03:42.185994"
+    },
+    {
+      "id": 67,
+      "date": "2026-04-14",
+      "player_name": "Devin Booker",
+      "team": "PHX",
+      "opponent": "DAL",
+      "stat_type": "Points",
+      "predicted": 27.7,
+      "line": 27.0,
+      "direction": "OVER",
+      "edge": 0.7,
+      "confidence": 22,
+      "actual": null,
+      "correct": null,
+      "created_at": "2026-04-14T08:03:42.185995"
+    },
+    {
+      "id": 68,
+      "date": "2026-04-14",
+      "player_name": "Kel'el Ware",
+      "team": "MIA",
+      "opponent": "ATL",
+      "stat_type": "Rebounds",
+      "predicted": 8.2,
+      "line": 6.5,
+      "direction": "OVER",
+      "edge": 1.7,
+      "confidence": 65,
+      "actual": null,
+      "correct": null,
+      "created_at": "2026-04-14T08:03:42.185996"
+    },
+    {
+      "id": 69,
+      "date": "2026-04-14",
+      "player_name": "Moussa Diabat\u00e9",
+      "team": "CHA",
+      "opponent": "NYK",
+      "stat_type": "Rebounds",
+      "predicted": 8.6,
+      "line": 10.5,
+      "direction": "UNDER",
+      "edge": -1.9,
+      "confidence": 62,
+      "actual": null,
+      "correct": null,
+      "created_at": "2026-04-14T08:03:42.185998"
+    },
+    {
+      "id": 70,
+      "date": "2026-04-14",
+      "player_name": "Robert Williams III",
+      "team": "POR",
+      "opponent": "SAC",
+      "stat_type": "Rebounds",
+      "predicted": 7.7,
+      "line": 6.5,
+      "direction": "OVER",
+      "edge": 1.2,
+      "confidence": 52,
+      "actual": null,
+      "correct": null,
+      "created_at": "2026-04-14T08:03:42.185999"
+    },
+    {
+      "id": 71,
+      "date": "2026-04-14",
+      "player_name": "Donovan Clingan",
+      "team": "POR",
+      "opponent": "SAC",
+      "stat_type": "Rebounds",
+      "predicted": 11.3,
+      "line": 12.5,
+      "direction": "UNDER",
+      "edge": -1.2,
+      "confidence": 47,
+      "actual": null,
+      "correct": null,
+      "created_at": "2026-04-14T08:03:42.186000"
+    },
+    {
+      "id": 72,
+      "date": "2026-04-14",
+      "player_name": "Mark Williams",
+      "team": "PHX",
+      "opponent": "LAL",
+      "stat_type": "Rebounds",
+      "predicted": 7.8,
+      "line": 7.5,
+      "direction": "OVER",
+      "edge": 0.3,
+      "confidence": 40,
+      "actual": null,
+      "correct": null,
+      "created_at": "2026-04-14T08:03:42.186001"
+    },
+    {
+      "id": 73,
+      "date": "2026-04-14",
+      "player_name": "Miles Bridges",
+      "team": "CHA",
+      "opponent": "NYK",
+      "stat_type": "Rebounds",
+      "predicted": 6.2,
+      "line": 5.5,
+      "direction": "OVER",
+      "edge": 0.7,
+      "confidence": 38,
+      "actual": null,
+      "correct": null,
+      "created_at": "2026-04-14T08:03:42.186003"
+    },
+    {
+      "id": 74,
+      "date": "2026-04-14",
+      "player_name": "Deni Avdija",
+      "team": "POR",
+      "opponent": "SAC",
+      "stat_type": "Rebounds",
+      "predicted": 7.0,
+      "line": 7.0,
+      "direction": "UNDER",
+      "edge": 0.0,
+      "confidence": 35,
+      "actual": null,
+      "correct": null,
+      "created_at": "2026-04-14T08:03:42.186004"
+    },
+    {
+      "id": 75,
+      "date": "2026-04-14",
+      "player_name": "Bam Adebayo",
+      "team": "MIA",
+      "opponent": "ATL",
+      "stat_type": "Rebounds",
+      "predicted": 10.7,
+      "line": 10.5,
+      "direction": "OVER",
+      "edge": 0.2,
+      "confidence": 34,
+      "actual": null,
+      "correct": null,
+      "created_at": "2026-04-14T08:03:42.186005"
+    },
+    {
+      "id": 76,
+      "date": "2026-04-14",
+      "player_name": "Deni Avdija",
+      "team": "POR",
+      "opponent": "SAC",
+      "stat_type": "Assists",
+      "predicted": 7.0,
+      "line": 6.5,
+      "direction": "OVER",
+      "edge": 0.5,
+      "confidence": 50,
+      "actual": null,
+      "correct": null,
+      "created_at": "2026-04-14T08:03:42.186006"
+    },
+    {
+      "id": 77,
+      "date": "2026-04-14",
+      "player_name": "LaMelo Ball",
+      "team": "CHA",
+      "opponent": "NYK",
+      "stat_type": "Assists",
+      "predicted": 7.0,
+      "line": 8.0,
+      "direction": "UNDER",
+      "edge": -1.0,
+      "confidence": 45,
+      "actual": null,
+      "correct": null,
+      "created_at": "2026-04-14T08:03:42.186008"
+    },
+    {
+      "id": 78,
+      "date": "2026-04-14",
+      "player_name": "Collin Gillespie",
+      "team": "PHX",
+      "opponent": "LAL",
+      "stat_type": "Assists",
+      "predicted": 4.0,
+      "line": 2.5,
+      "direction": "OVER",
+      "edge": 1.5,
+      "confidence": 45,
+      "actual": null,
+      "correct": null,
+      "created_at": "2026-04-14T08:03:42.186009"
+    },
+    {
+      "id": 79,
+      "date": "2026-04-14",
+      "player_name": "Davion Mitchell",
+      "team": "MIA",
+      "opponent": "ATL",
+      "stat_type": "Assists",
+      "predicted": 6.5,
+      "line": 6.0,
+      "direction": "OVER",
+      "edge": 0.5,
+      "confidence": 40,
+      "actual": null,
+      "correct": null,
+      "created_at": "2026-04-14T08:03:42.186010"
+    },
+    {
+      "id": 80,
+      "date": "2026-04-14",
+      "player_name": "Devin Booker",
+      "team": "PHX",
+      "opponent": "DAL",
+      "stat_type": "Assists",
+      "predicted": 6.3,
+      "line": 6.0,
+      "direction": "OVER",
+      "edge": 0.3,
+      "confidence": 36,
+      "actual": null,
+      "correct": null,
+      "created_at": "2026-04-14T08:03:42.186011"
+    },
+    {
+      "id": 81,
+      "date": "2026-04-14",
+      "player_name": "Jaime Jaquez Jr.",
+      "team": "MIA",
+      "opponent": "ATL",
+      "stat_type": "Assists",
+      "predicted": 5.1,
+      "line": 7.5,
+      "direction": "UNDER",
+      "edge": -2.4,
+      "confidence": 0,
+      "actual": null,
+      "correct": null,
+      "created_at": "2026-04-14T08:03:42.186012"
+    },
+    {
+      "id": 82,
+      "date": "2026-04-15",
+      "player_name": "Kawhi Leonard",
+      "team": "LAC",
+      "opponent": "POR",
+      "stat_type": "Points",
+      "predicted": 26.6,
+      "line": 29.5,
+      "direction": "UNDER",
+      "edge": -2.9,
+      "confidence": 49,
+      "actual": null,
+      "correct": null,
+      "created_at": "2026-04-15T07:26:25.795252"
+    },
+    {
+      "id": 83,
+      "date": "2026-04-15",
+      "player_name": "Desmond Bane",
+      "team": "ORL",
+      "opponent": "BOS",
+      "stat_type": "Points",
+      "predicted": 18.2,
+      "line": 19.5,
+      "direction": "UNDER",
+      "edge": -1.3,
+      "confidence": 48,
+      "actual": null,
+      "correct": null,
+      "created_at": "2026-04-15T07:26:25.795263"
+    },
+    {
+      "id": 84,
+      "date": "2026-04-15",
+      "player_name": "Paolo Banchero",
+      "team": "ORL",
+      "opponent": "BOS",
+      "stat_type": "Points",
+      "predicted": 21.9,
+      "line": 23.5,
+      "direction": "UNDER",
+      "edge": -1.6,
+      "confidence": 36,
+      "actual": null,
+      "correct": null,
+      "created_at": "2026-04-15T07:26:25.795266"
+    },
+    {
+      "id": 85,
+      "date": "2026-04-15",
+      "player_name": "Tyrese Maxey",
+      "team": "PHI",
+      "opponent": "MIL",
+      "stat_type": "Points",
+      "predicted": 27.5,
+      "line": 29.5,
+      "direction": "UNDER",
+      "edge": -2.0,
+      "confidence": 35,
+      "actual": null,
+      "correct": null,
+      "created_at": "2026-04-15T07:26:25.795269"
+    },
+    {
+      "id": 86,
+      "date": "2026-04-15",
+      "player_name": "Kawhi Leonard",
+      "team": "LAC",
+      "opponent": "POR",
+      "stat_type": "Rebounds",
+      "predicted": 6.8,
+      "line": 7.5,
+      "direction": "UNDER",
+      "edge": -0.7,
+      "confidence": 48,
+      "actual": null,
+      "correct": null,
+      "created_at": "2026-04-15T07:26:25.795270"
+    },
+    {
+      "id": 87,
+      "date": "2026-04-15",
+      "player_name": "Wendell Carter Jr.",
+      "team": "ORL",
+      "opponent": "BOS",
+      "stat_type": "Rebounds",
+      "predicted": 6.5,
+      "line": 7.5,
+      "direction": "UNDER",
+      "edge": -1.0,
+      "confidence": 38,
+      "actual": null,
+      "correct": null,
+      "created_at": "2026-04-15T07:26:25.795272"
+    },
+    {
+      "id": 88,
+      "date": "2026-04-15",
+      "player_name": "Paolo Banchero",
+      "team": "ORL",
+      "opponent": "BOS",
+      "stat_type": "Rebounds",
+      "predicted": 8.5,
+      "line": 8.5,
+      "direction": "UNDER",
+      "edge": 0.0,
+      "confidence": 35,
+      "actual": null,
+      "correct": null,
+      "created_at": "2026-04-15T07:26:25.795274"
+    },
+    {
+      "id": 89,
+      "date": "2026-04-15",
+      "player_name": "Andre Drummond",
+      "team": "PHI",
+      "opponent": "MIL",
+      "stat_type": "Rebounds",
+      "predicted": 8.6,
+      "line": 14.5,
+      "direction": "UNDER",
+      "edge": -5.9,
+      "confidence": 0,
+      "actual": null,
+      "correct": null,
+      "created_at": "2026-04-15T07:26:25.795275"
+    },
+    {
+      "id": 90,
+      "date": "2026-04-15",
+      "player_name": "Desmond Bane",
+      "team": "ORL",
+      "opponent": "BOS",
+      "stat_type": "Assists",
+      "predicted": 3.7,
+      "line": 4.0,
+      "direction": "UNDER",
+      "edge": -0.3,
+      "confidence": 41,
+      "actual": null,
+      "correct": null,
+      "created_at": "2026-04-15T07:26:25.795276"
+    },
+    {
+      "id": 91,
+      "date": "2026-04-15",
+      "player_name": "Tyrese Maxey",
+      "team": "PHI",
+      "opponent": "MIL",
+      "stat_type": "Assists",
+      "predicted": 6.5,
+      "line": 6.0,
+      "direction": "OVER",
+      "edge": 0.5,
+      "confidence": 35,
+      "actual": null,
+      "correct": null,
+      "created_at": "2026-04-15T07:26:25.795278"
+    },
+    {
+      "id": 92,
+      "date": "2026-04-15",
+      "player_name": "Paolo Banchero",
+      "team": "ORL",
+      "opponent": "BOS",
+      "stat_type": "Assists",
+      "predicted": 5.2,
+      "line": 5.0,
+      "direction": "OVER",
+      "edge": 0.2,
+      "confidence": 34,
+      "actual": null,
+      "correct": null,
+      "created_at": "2026-04-15T07:26:25.795279"
+    },
+    {
+      "id": 93,
+      "date": "2026-04-15",
+      "player_name": "Draymond Green",
+      "team": "GSW",
+      "opponent": "SAC",
+      "stat_type": "Assists",
+      "predicted": 6.2,
+      "line": 6.0,
+      "direction": "OVER",
+      "edge": 0.2,
+      "confidence": 34,
+      "actual": null,
+      "correct": null,
+      "created_at": "2026-04-15T07:26:25.795281"
+    },
+    {
+      "id": 94,
+      "date": "2026-04-15",
+      "player_name": "VJ Edgecombe",
+      "team": "PHI",
+      "opponent": "MIL",
+      "stat_type": "Assists",
+      "predicted": 5.3,
+      "line": 7.5,
+      "direction": "UNDER",
+      "edge": -2.2,
+      "confidence": 0,
+      "actual": null,
+      "correct": null,
+      "created_at": "2026-04-15T07:26:25.795283"
     }
   ],
-  "next_id": 60
+  "next_id": 95
 }
